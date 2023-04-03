@@ -21,7 +21,11 @@ Design statement: I will to design and make a ———— for a client who is �
 ## Wireframe
 ## Flow Diagram
 ## ER Diagram
-With connections!
+<img src="https://user-images.githubusercontent.com/111758436/229422641-67c77a1e-0720-4067-b2a7-fd112304dd21.jpg" style="width:100%">
+<p align="justify">
+  Fig. 6: Entity-Relationship (ER) diagram for the Foodie network's database, illustrating the relationships between the Users, Posts, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship.
+</p>
+
 ## UML Diagram
 ## Test plan
 ## Record of Tasks
