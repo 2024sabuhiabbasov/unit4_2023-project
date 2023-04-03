@@ -4,8 +4,6 @@
   Fig. 1: Using the prompt 'Generate a picture of a cozy kitchen with ingredients and utensils for cooking a delicious meal in a rustic and warm colors,' this image was generated using AI on Deep Dream Generator.
 </p>
 
-
-
 # Criteria A: Planning
 ## Problem Definition
 Not sure if needed...
@@ -21,7 +19,7 @@ Design statement: I will to design and make a ———— for a client who is �
 ## Wireframe
 ## Flow Diagram
 ## ER Diagram
-<img src="https://user-images.githubusercontent.com/111758436/229422641-67c77a1e-0720-4067-b2a7-fd112304dd21.jpg" style="width:100%">
+<img src="https://user-images.githubusercontent.com/111758436/229500851-d8c5936c-7028-420d-8078-bad2c7533d4e.jpg" style="width:100%">
 <p align="justify">
   Fig. 6: Entity-Relationship (ER) diagram for the Foodie network's database, illustrating the relationships between the Users, Posts, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship.
 </p>
@@ -29,7 +27,6 @@ Design statement: I will to design and make a ———— for a client who is �
 <p align="center">
   Fig. 7: Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
 </p>
-
 
 ## UML Diagram
 ## Test plan
