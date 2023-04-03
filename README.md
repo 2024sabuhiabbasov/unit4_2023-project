@@ -27,7 +27,7 @@ Design statement: I will to design and make a ———— for a client who is �
 </p>
 <img src="https://user-images.githubusercontent.com/111758436/229475239-904e430d-e67b-4f0e-b90f-c0bf1caf982a.png" style="width:100%">
 <p align="center">
-  Fig. 7: Example Data in Users table (Note: All information is fake and does not represent real individuals or their personal information)
+  Fig. 7: Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
 </p>
 
 
