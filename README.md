@@ -1,4 +1,4 @@
-# Unique Social Network
+# Foodie Social Network
 
 # Criteria A: Planning
 ## Problem Definition
@@ -23,7 +23,7 @@ With connections!
 # Criteria C: Development
 ## Existing tools
 ## List of techniques used
-No definition!
+No definition!  
 ## Development
 Explain how I was challenged and how I solved with explaining the lines of codes.
 

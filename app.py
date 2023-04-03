@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 from my_lib import database_worker, hash_password, check_password
 
-app = Flask(__name__) # create an instance of the Flask class
+app = Flask(__name__)  # create an instance of the Flask class
+
 
 def create_database():
     print("Creating the database")
@@ -20,6 +21,7 @@ def create_database():
                 title VARCHAR(150),
                 content text,
                 user_id INTEGER,
+                category text,
                 FOREIGN KEY (user_id) REFERENCES users(id) on delete cascade
     )           
     """
@@ -27,35 +29,26 @@ def create_database():
     db.run_save(query_posts)
     db.close()
 
-def create_test_user():
-    print("Creating test users")
+
+def new_user():
+    print("Adding new user")
     db = database_worker("social_net.db")
-    users = ["contact@sabuhiabbasov.tech", "alice.doe@company.com"]
-    passwords = ["qwerty", "12345678"]
-    posts = [[{"title": "I am Sabuhi", "content": "Sabu"}, {"title": "I am Sabu",
-                                                            "content": "Sabuhi"}],
-             [{"title":"I am Alice", "content":"Alice"}]]
-    for i in range(len(users)):
-        user = users[i]
-        pwd = passwords[i]
-        posts_user = posts[i]
+    user = ["Sabuhi", "Abbasov", "sabuhiabs", "2024.sabuhi.abbasov@uwcisak.jp",
+            "Abbasov12@4"]
+    query = f"""INSERT into users(name, surname, username, email, password) values(
+    "{user[0]}", "{user[1]}", "{user[2]}", "{user[3]}", "{hash_password(user[4])}")"""
+    db.run_save(query)
 
-        query = f"""INSERT into users(email, password) values("{user}", "{hash_password(
-            pwd)}")"""
-        db.run_save(query)
-
-        for p in posts_user:
-            query = f"""INSERT into posts(title, content, user_id) values("
-                        {p["title"]}", "{p["content"]}",1)"""
-            db.run_save(query)
 
 @app.route('/home')
 def home():
     return 'This is my home page'
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')
+
 
 @app.route('/requests_example', methods=["GET", "POST"])
 def requests_example():
@@ -65,7 +58,7 @@ def requests_example():
         # currency converter
         usd_value = request.args.get("usd_value")
         if usd_value:
-            jpy = int(usd_value)*132.615294
+            jpy = int(usd_value) * 132.615294
             result = f"{usd_value} USD is {jpy:.2f} JPY"
     elif request.method == "POST":
         # password checker
@@ -77,8 +70,9 @@ def requests_example():
                 result2 = "Unsafe password"
     return render_template('requests_example.html', data=result, data2=result2)
 
+
 create_database()
-create_test_user()
+# new_user()
 
 if __name__ == '__main__':
     app.run()
