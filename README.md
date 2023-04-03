@@ -31,6 +31,11 @@ Design statement: I will to design and make a ———— for a client who is �
 <p align="center">
   Fig. 8: Example Data in Posts Table (Note: All information is fake and does not represent real posts or their authors)
 </p>
+<img src="https://user-images.githubusercontent.com/111758436/229649561-11764057-4ff2-430c-ba24-d151bcecba67.png" style="width:100%">
+<p align="center">
+  Fig. 9: Example Data in Comments Table (Note: All information is fake and does not represent real comments or their authors)
+</p>
+
 
 ## UML Diagram
 ## Test plan
