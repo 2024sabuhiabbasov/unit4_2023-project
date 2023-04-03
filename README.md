@@ -1,4 +1,10 @@
 # Foodie Social Network
+<img src="https://user-images.githubusercontent.com/111758436/229414078-7b5067ff-7633-4fb9-9ec2-4d1091d0e5e3.png" style="width:100%">
+<p align="center">
+  Fig. 1: Using the prompt 'Generate a picture of a cozy kitchen with ingredients and utensils for cooking a delicious meal in a rustic and warm colors,' this image was generated using AI on Deep Dream Generator.
+</p>
+
+
 
 # Criteria A: Planning
 ## Problem Definition
