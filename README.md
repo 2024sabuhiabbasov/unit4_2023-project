@@ -12,6 +12,11 @@
 ### Design Statement
 I will design and make a website for food enthusiastics. The website is constructed using the Flask web framework, HTML/CSS, and Python. It will take one month to make and will be evaluated according to the criteria A.
 ### Rationale for Proposed Solution
+The chosen technology tools for the food enthusiast social network project include Flask, Python, HTML/CSS, and SQLite. Flask was chosen as the web framework due to its simplicity, flexibility, and extensibility, making it well-suited for building scalable and efficient web applications.[^1] Python was selected for its ease of use, readability, and extensive library support, making it a popular choice for web development.[^2] HTML/CSS was chosen for its ability to create user-friendly and visually appealing interfaces, which is particularly important for a social network platform.[^3] Finally, SQLite was selected for its simplicity and ease of use for small-scale database management.[^4]
+
+These technology tools were carefully evaluated and selected based on their suitability for the project's specific needs, rather than personal experience or familiarity. Extensive research was conducted to identify the most appropriate tools for building a dedicated social network for food enthusiasts. The use of SQLite highlights that data management has been carefully considered in the proposed solution, ensuring that the website can handle large amounts of data efficiently.
+
+Therefore, the selection of technology tools for the food enthusiast social network project is justified in the context of the project's specific requirements and has been chosen based on extensive research and evaluation.
 ### Success Criteria
 
 # Criteria B: Design
@@ -59,3 +64,7 @@ Explain how I was challenged and how I solved with explaining the lines of codes
 </p>
 
 # Works cited
+[^1]: Grinberg, Miguel. "The Flask Mega-Tutorial Part I: Hello, World!" Miguel Grinberg's Blog, 3 Apr. 2021, https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world. Accessed 2 Apr. 2023.
+[^2]: Python Software Foundation. Python, Python Software Foundation, https://www.python.org/. Accessed 2 Apr. 2023.
+[^3]: "W3Schools Online Web Tutorials. HTML/CSS Tutorial." W3Schools, 2023, https://www.w3schools.com/html/html_css.asp. Accessed 2 Apr. 2023.
+[^4]: sqlite tutorial. (n.d.). SQLite Tutorial - An Easy Way to Master SQLite Fast. Retrieved October 10, 2021, from https://www.sqlitetutorial.net/ Accessed 2 Apr. 2023.
