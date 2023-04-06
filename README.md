@@ -18,6 +18,12 @@ These technology tools were carefully evaluated and selected based on their suit
 
 Therefore, the selection of technology tools for the food enthusiast social network project is justified in the context of the project's specific requirements and has been chosen based on extensive research and evaluation.
 ### Success Criteria
+1. The platform provides a user registration feature, allowing users to create a personal account.
+2. Users can easily share recipes with each other through the platform's sharing functionality.
+3. The platform offers a restaurant review feature, allowing users to leave reviews and ratings for restaurants.
+4. Users are able to make edits to their own posts on the platform.
+5. The platform provides a search functionality that allows users to easily find and filter through recipes and restaurant reviews.
+6. The platform includes a feature that allows users to create and save lists of their favorite restaurants and dishes.
 
 # Criteria B: Design
 ## System Diagram
