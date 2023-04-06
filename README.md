@@ -1,4 +1,4 @@
-# Foodie Social Network
+# Foodie: A Social Network for Food Lovers
 <img src="https://user-images.githubusercontent.com/111758436/229414078-7b5067ff-7633-4fb9-9ec2-4d1091d0e5e3.png" style="width:100%">
 <p align="center">
   Fig. 1: Using the prompt 'Generate a picture of a cozy kitchen with ingredients and utensils for cooking a delicious meal in a rustic and warm colors,' this image was generated using AI on Deep Dream Generator.
@@ -9,9 +9,8 @@
 <p align="justify">As a food lover, I have identified a problem where there is no dedicated social network for food enthusiasts. We have limited options for food enthusiasts to connect with others online, limited options to share culinary creations, and difficulty finding specific recipes or restaurant recommendations online. Through research and consultations with other food enthusiasts (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a>), I have found a need for a dedicated social network for food lovers. Existing food-related websites (eg. Yelp: it doesn't allow for easy sharing and discovery of recipes) and apps don't meet specifically to the needs of this community. I have tried them, but they lack specific features for food lovers.</p>
 
 ## Proposed Solution
-Under 500 words with all 3 subtitles.
 ### Design Statement
-Design statement: I will to design and make a ———— for a client who is ———. The ——– will about ———— and is constructed using the software ———. It will take ———- to make and will be evaluated according to the criteria ———.
+I will design and make a website for food enthusiastics. The website is constructed using the Flask web framework, HTML/CSS, and Python. It will take one month to make and will be evaluated according to the criteria A.
 ### Rationale for Proposed Solution
 ### Success Criteria
 
