@@ -6,7 +6,7 @@
 
 # Criteria A: Planning
 ## Problem Definition
-As a food lover, I have identified a problem where there is no dedicated social network for food enthusiasts. We have limited options for food enthusiasts to connect with others online, limited options to share culinary creations, and difficulty finding specific recipes or restaurant recommendations online. Through research and consultations with other food enthusiasts, I have found a need for a dedicated social network for food lovers. Existing food-related websites (eg. Yelp: it doesn't allow for easy sharing and discovery of recipes) and apps don't meet specifically to the needs of this community. I have tried them, but they lack specific features for food lovers.
+<p align="justify">As a food lover, I have identified a problem where there is no dedicated social network for food enthusiasts. We have limited options for food enthusiasts to connect with others online, limited options to share culinary creations, and difficulty finding specific recipes or restaurant recommendations online. Through research and consultations with other food enthusiasts (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/edit/master/README.md#evidence-of-consultation">Evidence of Consultation</a>), I have found a need for a dedicated social network for food lovers. Existing food-related websites (eg. Yelp: it doesn't allow for easy sharing and discovery of recipes) and apps don't meet specifically to the needs of this community. I have tried them, but they lack specific features for food lovers.</p>
 
 ## Proposed Solution
 Under 500 words with all 3 subtitles.
@@ -53,5 +53,10 @@ Explain how I was challenged and how I solved with explaining the lines of codes
 ## A video demonstrating the proposed solution with narration
 
 # Appendix
+## Evidence of consultation
+![unit-4-problem-consultation](https://user-images.githubusercontent.com/111758436/230363742-b80cf48b-731d-4559-b3d3-5e9a917fade9.png)
+<p align="justify">
+  I spoke with my friend, who is also a food enthusiast, about the challenges we face in connecting with others online and sharing our culinary creations. During our chat, we discussed the need for a dedicated social network for food lovers, and I captured this screenshot to illustrate our conversation.
+</p>
 
 # Works cited
