@@ -6,9 +6,8 @@
 
 # Criteria A: Planning
 ## Problem Definition
-As a food lover, I have identified a problem where there is no dedicated social network for food enthusiasts. Existing food-related websites and apps don't cater specifically to the needs of this community. I have tried them, but they lack specific features for food lovers. To address this, I propose developing a foodie social network for individuals to connect, share culinary creations, discover new recipes, and review restaurants.
+As a food lover, I have identified a problem where there is no dedicated social network for food enthusiasts. We have limited options for food enthusiasts to connect with others online, limited options to share culinary creations, and difficulty finding specific recipes or restaurant recommendations online. Through research and consultations with other food enthusiasts, I have found a need for a dedicated social network for food lovers. Existing food-related websites and apps don't meet specifically to the needs of this community. I have tried them, but they lack specific features for food lovers.
 
-This problem scenario includes limited options for food enthusiasts to connect with others online, limited options to share culinary creations, and difficulty finding specific recipes or restaurant recommendations online. Through research and consultations with other food enthusiasts, I have found a need for a dedicated social network for food lovers.
 ## Proposed Solution
 Under 500 words with all 3 subtitles.
 ### Design Statement
