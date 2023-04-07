@@ -6,7 +6,7 @@
 
 # Criteria A: Planning
 ## Problem Definition
-<p align="justify">As a food lover, I have identified a problem where there is no dedicated social network for food enthusiasts. We have limited options for food enthusiasts to connect with others online, limited options to share culinary creations, and difficulty finding specific recipes or restaurant recommendations online. Through research and consultations with other food enthusiasts (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a>), I have found a need for a dedicated social network for food lovers. Existing food-related websites (eg. Yelp: it doesn't allow for easy sharing and discovery of recipes) and apps don't meet specifically to the needs of this community. I have tried them, but they lack specific features for food lovers.</p>
+<p align="justify">As a food lover, I have identified a problem where there is no dedicated social network for food enthusiasts. We have limited options for food enthusiasts to connect with others online, limited options to share culinary creations, and difficulty finding specific recipes or restaurant recommendations online. Through research and consultations with other food enthusiasts (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a> in Appendix), I have found a need for a dedicated social network for food lovers. Existing food-related websites (eg. Yelp: it doesn't allow for easy sharing and discovery of recipes) and apps don't meet specifically to the needs of this community. I have tried them, but they lack specific features for food lovers.</p>
 
 ## Proposed Solution
 ### Design Statement
@@ -19,10 +19,10 @@ These technology tools were carefully evaluated and selected based on their suit
 Therefore, the selection of technology tools for the food enthusiast social network project is justified in the context of the project's specific requirements and has been chosen based on extensive research and evaluation.
 ### Success Criteria
 1. The platform provides a user registration feature, allowing users to create a personal account.
-2. Users can easily share recipes with each other through the platform's sharing functionality.
+2. Users can share recipes with each other through the platform's sharing functionality.
 3. The platform offers a restaurant review feature, allowing users to leave reviews and ratings for restaurants.
-4. Users are able to make edits to their own posts on the platform.
-5. The platform provides a search functionality that allows users to easily find and filter through recipes and restaurant reviews.
+4. Users are able to make edits to their own posts on the platform: modify and remove.
+5. The platform provides a search functionality that allows users to find and filter through recipes and restaurant reviews.
 6. The platform includes a feature that allows users to create and save lists of their favorite restaurants and dishes.
 
 # Criteria B: Design
