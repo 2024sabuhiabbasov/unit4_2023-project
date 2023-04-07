@@ -30,7 +30,7 @@ Therefore, the selection of technology tools for the food enthusiast social netw
 ## Wireframe
 ## Flow Diagram
 ## ER Diagram
-<img src="https://user-images.githubusercontent.com/111758436/229500851-d8c5936c-7028-420d-8078-bad2c7533d4e.jpg" style="width:100%">
+<img src="https://user-images.githubusercontent.com/111758436/230533070-1de92db9-e160-4a9b-8f98-ee646fd35cb9.jpg" style="width:100%">
 <p align="justify">
   <i>Fig. 6</i>: Entity-Relationship (ER) diagram for the Foodie network's database, illustrating the relationships between the Users, Posts, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship.
 </p>
