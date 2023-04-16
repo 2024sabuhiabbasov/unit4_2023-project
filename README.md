@@ -12,11 +12,13 @@
 ### Design Statement
 I will design and make a website for food enthusiastics. The website is constructed using the Flask web framework, HTML/CSS, and Python. It will take one month to make and will be evaluated according to the criteria A.
 ### Rationale for Proposed Solution
-The chosen technology tools for the food enthusiast social network project include Flask, Python, HTML/CSS, and SQLite. Flask was chosen as the web framework due to its simplicity, flexibility, and extensibility, making it well-suited for building scalable and efficient web applications.[^1] Python was selected for its ease of use, readability, and extensive library support, making it a popular choice for web development.[^2] HTML/CSS was chosen for its ability to create user-friendly and visually appealing interfaces, which is particularly important for a social network platform.[^3] Finally, SQLite was selected for its simplicity and ease of use for small-scale database management.[^4]
+Application types include web and mobile application. Mobile applications can be accessed through only mobile devices. This puts a limit in the number of people who can use the application. However, web applications can be accessed through all electronic devices that have browser. As I want my application to be accessible for as much people as possible, I decided to create a web-application.
 
-These technology tools were carefully evaluated and selected based on their suitability for the project's specific needs, rather than personal experience or familiarity. Extensive research was conducted to identify the most appropriate tools for building a dedicated social network for food enthusiasts. The use of SQLite highlights that data management has been carefully considered in the proposed solution, ensuring that the website can handle large amounts of data efficiently.
+There are number of tools available to create a web application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python language. One of the reasons why Python is an adequate language to use for web applications is that it has a wide range of libraries. This will help me to meet the requirements for the social network as it is a large scale web application. Secondly, Python has a built-in database management system, allowing us to handle large amount of data without any concerns. This is essential for a social network to manage data of hundreds of users using the social network efficiently. (PODGÓRSKI and SŁUPSKI)
 
-Therefore, the selection of technology tools for the food enthusiast social network project is justified in the context of the project's specific requirements and has been chosen based on extensive research and evaluation.
+To create a website using Python, there are several frameworks available. The most famous Python frameworks are Django and Flask.
+
+
 ### Success Criteria
 1. The platform provides a user registration feature, allowing users to create a personal account.
 2. Users can share recipes with each other through the platform's sharing functionality.
@@ -77,7 +79,4 @@ Explain how I was challenged and how I solved with explaining the lines of codes
 </p>
 
 # Works cited
-[^1]: Grinberg, Miguel. "The Flask Mega-Tutorial Part I: Hello, World!" Miguel Grinberg's Blog, 3 Apr. 2021, https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world. Accessed 2 Apr. 2023.
-[^2]: Python Software Foundation. Python, Python Software Foundation, https://www.python.org/. Accessed 2 Apr. 2023.
-[^3]: "W3Schools Online Web Tutorials. HTML/CSS Tutorial." W3Schools, 2023, https://www.w3schools.com/html/html_css.asp. Accessed 2 Apr. 2023.
-[^4]: sqlite tutorial. (n.d.). SQLite Tutorial - An Easy Way to Master SQLite Fast. Retrieved October 10, 2021, from https://www.sqlitetutorial.net/ Accessed 2 Apr. 2023.
+[^1]: PODGÓRSKI, PIOTR, and MICHAŁ SŁUPSKI. “Why Use Python for Web Development? Pros, Cons, and Business Benefits.” STX Next, https://www.stxnext.com/blog/python-for-web-development/. Accessed 4 April 2023.
