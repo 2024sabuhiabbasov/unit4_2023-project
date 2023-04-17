@@ -39,7 +39,7 @@ To create a website using Python, there are several frameworks available. The mo
 ## Wireframe
 ## Flow Diagram
 ## ER Diagram
-<img src="https://user-images.githubusercontent.com/111758436/230533070-1de92db9-e160-4a9b-8f98-ee646fd35cb9.jpg" style="width:100%">
+<img src="https://user-images.githubusercontent.com/111758436/232424762-99f902f8-2ccc-4f16-a806-415555067f01.jpg" style="width:100%">
 <p align="justify">
   <i>Fig. 6</i>: Entity-Relationship (ER) diagram for the Foodie network's database, illustrating the relationships between the Users, Posts, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship.
 </p>
