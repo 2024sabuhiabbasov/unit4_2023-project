@@ -12,12 +12,20 @@
 ### Design Statement
 I will design and make a website for food enthusiastics. The website is constructed using the Flask web framework, HTML/CSS, and Python. It will take one month to make and will be evaluated according to the criteria A.
 ### Rationale for Proposed Solution
-Application types include web and mobile application. Mobile applications can be accessed through only mobile devices. This puts a limit in the number of people who can use the application. However, web applications can be accessed through all electronic devices that have browser. As I want my application to be accessible for as much people as possible, I decided to create a web-application.
+Application types include web and mobile application. Mobile applications can be accessed through only mobile devices. This puts a limit in the number of people who can use the application. However, web applications can be accessed through all electronic devices that have browser. I want my application to be accessible for as much people as possible, so I decided to create a web-application.
 
-There are number of tools available to create a web application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python language. One of the reasons why Python is an adequate language to use for web applications is that it has a wide range of libraries. This will help me to meet the requirements for the social network as it is a large scale web application. Secondly, Python has a built-in database management system, allowing us to handle large amount of data without any concerns. This is essential for a social network to manage data of hundreds of users using the social network efficiently. (PODGÓRSKI and SŁUPSKI)
+There are number of tools available to create a web application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python is an adequate language for my project is that it has a wide range of libraries. This will help me to meet the requirements for the social network as it is a large scale web application. Secondly, Python has a built-in database management system, allowing me to handle large amount of data without any concerns, which is SQLAlchemy library.
 
-To create a website using Python, there are several frameworks available. The most famous Python frameworks are Django and Flask.
+SQLAlchemy is a Python library that is compatible with different types of databases. This allows me not to worry about writing complicated lines of SQL codes, but focus on working with complex data models that a project such as my social network requires. As a result, users will benefit from a social network that is efficient and user-friendly, with a database that can handle a large amount of data without any issues.
 
+To create a website using Python, there are several frameworks available written in the Python programming language. The most famous types of Python frameworks are Django and Flask. 
+
+The reason behind my decision is that Flask provides a high level of flexibility, which is crucial for a web-application that has specific requirements. Unlike other rigid frameworks (Django), Flask can seamlessly work with a variety of tools, making it easy to customize my project to meet specific requirements. This means that users will benefit from a more personalized and customizable social network experience.
+
+There are different tools to use for the user interface for web applications. For example, React, Angular, and Vue are all popular choices. However, I decided to use HTML/CSS for my project. There are several reasons behind this. Firstly, HTML/CSS is the foundation of the web, and it's supported by all browsers. This means that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS is highly customizable, and I can easily modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.
+<p align="right">
+  Word count: 430 words
+</p>
 
 ### Success Criteria
 1. The platform provides a user registration feature, allowing users to create a personal account.
