@@ -6,25 +6,26 @@
 
 # Criteria A: Planning
 ## Problem Definition
-<p align="justify">As a food lover, I have identified a problem where there is no dedicated social network for food enthusiasts. We have limited options for food enthusiasts to connect securely with others online using a web-application, limited options to share culinary creations, and difficulty finding specific recipes or restaurant recommendations online. Additionally, I have had difficulties to keep notes of recipes or restaurant names on paper. Through research and consultations with other food enthusiasts (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a> in Appendix), I have found a need for a dedicated social network for food lovers. Existing food-related websites (eg. Yelp: it doesn't allow for easy sharing and discovery of recipes) and apps don't meet specifically to the needs of this community. I have tried them, but they lack specific features for food lovers.</p>
+<p align="justify">As a food lover, I've identified a problem where there's no dedicated social network for food enthusiasts. We’ve limited options to connect securely with others online using a web-application, limited options to share culinary creations, and difficulty finding recipes or restaurant recommendations. Additionally, I've had difficulties to keep notes of recipes or restaurant names on paper. Through research and consultations with others (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a> in Appendix), I've found a need for a social network for food lovers. Existing food-related websites (Yelp: it doesn't allow for sharing and discovery of recipes) and apps don't meet the needs of this community. I've tried them, but they lack specific features for food lovers.</p>
 
 ## Proposed Solution
 ### Design Statement
 I will design and make a website for food enthusiastics. The website is constructed using the Flask web framework, HTML/CSS, and Python. It will take one month to make and will be evaluated according to the criteria A.
 ### Rationale for Proposed Solution
-Application types include web and mobile application. Mobile applications can be accessed through only mobile devices. This puts a limit in the number of people who can use the application. However, web applications can be accessed through all electronic devices that have browser. I want my application to be accessible for as much people as possible, so I decided to create a web-application.
+Application types include: web and mobile. Mobile applications can be accessed through only phones. This limits the number of people who can use the application. However, web-applications can be accessed through all electronic devices that have browser. I want my application to be accessible for as much people as possible, so I decided to create a web-application.
 
-There are number of tools available to create a web application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python is an adequate language for my project is that it has a wide range of libraries. This will help me to meet the requirements for the social network as it is a large scale web application. Secondly, Python has a built-in database management system, allowing me to handle large amount of data without any concerns, which is SQLAlchemy library.
+There're number of tools available to create a web-application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python's an adequate language that it has a wide range of libraries. This'll help to meet the requirements for my project as it's a large scale web-application. Secondly, Python has a built-in database-management system, allowing me to handle large amount of data without concern, which's SQLAlchemy library.[^1]
 
-SQLAlchemy is a Python library that is compatible with different types of databases. This allows me not to worry about writing complicated lines of SQL codes, but focus on working with complex data models that a project such as my social network requires. As a result, users will benefit from a social network that is efficient and user-friendly, with a database that can handle a large amount of data without any issues.
+SQLAlchemy's a library that's compatible with different types of databases. This allows me not worrying about writing complicated SQL codes, but working with complex data models that my project requires. Therefore, users will benefit a social network that's efficient and user-friendly, with a database handling large amount of data.[^2]
 
-To create a website using Python, there are several frameworks available written in the Python programming language. The most famous types of Python frameworks are Django and Flask. 
+There're several frameworks available written in the Python programming language for web-development. Well-known types of Python frameworks are Django and Flask. 
 
-The reason behind my decision is that Flask provides a high level of flexibility, which is crucial for a web-application that has specific requirements. Unlike other rigid frameworks (Django), Flask can seamlessly work with a variety of tools, making it easy to customize my project to meet specific requirements. This means that users will benefit from a more personalized and customizable social network experience.
+The reason behind my decision's Flask provides high level flexibility, which's crucial for web-applications that have specific requirements. Unlike other rigid frameworks (Django), Flask can work with a variety of tools, making it easy to customize to meet specific requirements, meaning users will benefit from a more personalized and customizable social network.[^3]
 
-There are different tools to use for the user interface for web applications. For example, React, Angular, and Vue are all popular choices. However, I decided to use HTML/CSS for my project. There are several reasons behind this. Firstly, HTML/CSS is the foundation of the web, and it's supported by all browsers. This means that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS is highly customizable, and I can easily modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.
+There're different tools for the user-interface for web-applications: React, Angular, and Vue are all popular choices. I decided to use HTML/CSS for my project. There're several reasons behind: HTML/CSS's the foundation of the web and supported by all browsers, meaning that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS's highly customizable, and I can modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.[^4]
+
 <p align="right">
-  Word count: 430 words
+  Word count: <strong>499 words</strong>
 </p>
 
 ### Success Criteria
@@ -88,3 +89,6 @@ Explain how I was challenged and how I solved with explaining the lines of codes
 
 # Works cited
 [^1]: PODGÓRSKI, PIOTR, and MICHAŁ SŁUPSKI. “Why Use Python for Web Development? Pros, Cons, and Business Benefits.” STX Next, https://www.stxnext.com/blog/python-for-web-development/. Accessed 4 April 2023.
+[^2]: Kudari, Vinay. “Python SQLAlchemy: A Tutorial.” Built In, 10 November 2022, https://builtin.com/data-science/python-sqlalchemy. Accessed 4 April 2023.
+[^3]: Holovaty, Adrian, and Simon Willison. “Flask Vs Django: Which Python Framework to Choose?” InterviewBit, 29 July 2022, https://www.interviewbit.com/blog/flask-vs-django/. Accessed 4 April 2023.
+[^4]: CodeClan Team. “Top 5 reasons you should learn HTML & CSS.” CodeClan, 18 September 2020, https://codeclan.com/blog/top-5-reasons-you-should-learn-html-css/. Accessed 4 April 2023.
