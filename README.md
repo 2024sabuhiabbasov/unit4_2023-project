@@ -46,6 +46,9 @@ There're different tools for the user-interface for web-applications: React, Ang
 # Criteria B: Design
 ## System Diagram
 ## Wireframe
+![Wireframe](https://user-images.githubusercontent.com/111758436/233389705-16c7192e-3e8a-49ac-851c-233865cdb49f.png)
+<i>Figure 2</i> - The wireframe for the user interface is depicted in Figure 2. It shows how the website is going to look like after the development process.
+
 ## Flow Diagram
 ## ER Diagram
 <img src="https://user-images.githubusercontent.com/111758436/232424762-99f902f8-2ccc-4f16-a806-415555067f01.jpg" style="width:100%">
