@@ -1,7 +1,7 @@
 # Foodie: A Social Network for Food Lovers
 <img src="https://user-images.githubusercontent.com/111758436/229414078-7b5067ff-7633-4fb9-9ec2-4d1091d0e5e3.png" style="width:100%">
 <p align="center">
-  <i>Fig. 1</i>: Using the prompt 'Generate a picture of a cozy kitchen with ingredients and utensils for cooking a delicious meal in a rustic and warm colors,' this image was generated using AI on Deep Dream Generator.
+  <i>Fig. 1</i>: Using the prompt 'Generate a picture of a cozy kitchen with ingredients and utensils for cooking a delicious meal in a rustic and warm colors,' this image was generated using AI on Deep Dream Generator.[1]
 </p>
 
 # Criteria A: Planning
@@ -14,15 +14,15 @@ I will design and make a website for food enthusiastics. The website is construc
 ### Rationale for Proposed Solution
 Application types include: web and mobile. Mobile applications can be accessed through only phones. This limits the number of people who can use the application. However, web-applications can be accessed through all electronic devices that have browser. I want my application to be accessible for as much people as possible, so I decided to create a web-application.
 
-There're number of tools available to create a web-application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python's an adequate language that it has a wide range of libraries. This'll help to meet the requirements for my project as it's a large scale web-application. Secondly, Python has a built-in database-management system, allowing me to handle large amount of data without concern, which's SQLAlchemy library.[^1]
+There're number of tools available to create a web-application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python's an adequate language that it has a wide range of libraries. This'll help to meet the requirements for my project as it's a large scale web-application. Secondly, Python has a built-in database-management system, allowing me to handle large amount of data without concern, which's SQLAlchemy library.[2]
 
-SQLAlchemy's a library that's compatible with different types of databases. This allows me not worrying about writing complicated SQL codes, but working with complex data models that my project requires. Therefore, users will benefit a social network that's efficient and user-friendly, with a database handling large amount of data.[^2]
+SQLAlchemy's a library that's compatible with different types of databases. This allows me not worrying about writing complicated SQL codes, but working with complex data models that my project requires. Therefore, users will benefit a social network that's efficient and user-friendly, with a database handling large amount of data.[3]
 
 There're several frameworks available written in the Python programming language for web-development. Well-known types of Python frameworks are Django and Flask. 
 
-The reason behind my decision's Flask provides high level flexibility, which's crucial for web-applications that have specific requirements. Unlike other rigid frameworks (Django), Flask can work with a variety of tools, making it easy to customize to meet specific requirements, meaning users will benefit from a more personalized and customizable social network.[^3]
+The reason behind my decision's Flask provides high level flexibility, which's crucial for web-applications that have specific requirements. Unlike other rigid frameworks (Django), Flask can work with a variety of tools, making it easy to customize to meet specific requirements, meaning users will benefit from a more personalized and customizable social network.[4]
 
-There're different tools for the user-interface for web-applications: React, Angular, and Vue are all popular choices. I decided to use HTML/CSS for my project. There're several reasons behind: HTML/CSS's the foundation of the web and supported by all browsers, meaning that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS's highly customizable, and I can modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.[^4]
+There're different tools for the user-interface for web-applications: React, Angular, and Vue are all popular choices. I decided to use HTML/CSS for my project. There're several reasons behind: HTML/CSS's the foundation of the web and supported by all browsers, meaning that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS's highly customizable, and I can modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.[5]
 
 <p align="right">
   Word count: <strong>499 words</strong>
@@ -88,7 +88,12 @@ Explain how I was challenged and how I solved with explaining the lines of codes
 </p>
 
 # Works cited
-[^1]: PODGÓRSKI, PIOTR, and MICHAŁ SŁUPSKI. “Why Use Python for Web Development? Pros, Cons, and Business Benefits.” STX Next, https://www.stxnext.com/blog/python-for-web-development/. Accessed 4 April 2023.
-[^2]: Kudari, Vinay. “Python SQLAlchemy: A Tutorial.” Built In, 10 November 2022, https://builtin.com/data-science/python-sqlalchemy. Accessed 4 April 2023.
-[^3]: Holovaty, Adrian, and Simon Willison. “Flask Vs Django: Which Python Framework to Choose?” InterviewBit, 29 July 2022, https://www.interviewbit.com/blog/flask-vs-django/. Accessed 4 April 2023.
-[^4]: CodeClan Team. “Top 5 reasons you should learn HTML & CSS.” CodeClan, 18 September 2020, https://codeclan.com/blog/top-5-reasons-you-should-learn-html-css/. Accessed 4 April 2023.
+[1]: Aifnet Ltd. “Deep Dream Generator.” https://deepdreamgenerator.com/. Accessed 3 April 2023.
+
+[2]: PODGÓRSKI, PIOTR, and MICHAŁ SŁUPSKI. “Why Use Python for Web Development? Pros, Cons, and Business Benefits.” STX Next, https://www.stxnext.com/blog/python-for-web-development/. Accessed 4 April 2023.
+
+[3]: Kudari, Vinay. “Python SQLAlchemy: A Tutorial.” Built In, 10 November 2022, https://builtin.com/data-science/python-sqlalchemy. Accessed 4 April 2023.
+
+[4]: Holovaty, Adrian, and Simon Willison. “Flask Vs Django: Which Python Framework to Choose?” InterviewBit, 29 July 2022, https://www.interviewbit.com/blog/flask-vs-django/. Accessed 4 April 2023.
+
+[5]: CodeClan Team. “Top 5 reasons you should learn HTML & CSS.” CodeClan, 18 September 2020, https://codeclan.com/blog/top-5-reasons-you-should-learn-html-css/. Accessed 4 April 2023.
