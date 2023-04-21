@@ -6,42 +6,44 @@
 
 # Criteria A: Planning
 ## Problem Definition
-<p align="justify">As a food lover, I've identified a problem where there's no dedicated social network for food enthusiasts. We’ve limited options to connect securely with others online using a web-application, limited options to share culinary creations, and difficulty finding recipes or restaurant recommendations. Additionally, I've had difficulties keeping notes of recipes or restaurant names on paper. Through research and consultations with others (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a> in Appendix), I've found a need for a social network for food lovers. Existing food-related websites (Yelp: it doesn't allow for sharing and discovery of recipes) and apps don't meet the needs of this community. I've tried them, but they lack specific features for food lovers.</p>
+<p align="justify">As a food lover, I've identified a problem where there's no dedicated social network for food enthusiasts. We’ve limited options to connect with others online using an application, to share culinary creations, restaurant reviews, and difficulty finding recipes or restaurant recommendations. Additionally, I've had difficulties keeping notes of recipes or restaurant names on paper. Through research and consultations with others (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a> in Appendix), I've found a need for a social network for food lovers. Existing food-related websites (Yelp: it doesn't allow sharing and discovery of recipes) and apps don't meet the needs of this community. I've tried them, but they lack specific features for food lovers (eg. following favorite users in the network).</p>
 
 ## Proposed Solution
 ### Design Statement
-I will design and make a website for food enthusiastics. The website is constructed using the Flask web framework, HTML/CSS, and Python. It will take one month to make and will be evaluated according to the criteria A.
+<p align="justify">
+  I'll make a website for food enthusiasts. The website's constructed using the Flask web-framework, HTML/CSS, and Python. It'll take one month to make and will be evaluated according to the criteria A.
+</p>
+
 ### Rationale for Proposed Solution
-Application types include: web and mobile. Mobile applications can be accessed through only phones. This limits the number of people who can use the application. However, web-applications can be accessed through all electronic devices that have browser. I want my application to be accessible for as much people as possible, so I decided to create a web-application.
-
-There're number of tools available to create a web-application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python's an adequate language that it has a wide range of libraries. This'll help to meet the requirements for my project as it's a large scale web-application. Secondly, Python has a built-in database-management system, allowing me to handle large amount of data without concern, which's SQLAlchemy library.[2]
-
-SQLAlchemy's a library that's compatible with different types of databases. This allows me not worrying about writing complicated SQL codes, but working with complex data models that my project requires. Therefore, users will benefit a social network that's efficient and user-friendly, with a database handling large amount of data.[3]
-
-There're several frameworks available written in the Python programming language for web-development. Well-known types of Python frameworks are Django and Flask. 
-
-The reason behind my decision's Flask provides high level flexibility, which's crucial for web-applications that have specific requirements. Unlike other rigid frameworks (Django), Flask can work with a variety of tools, making it easy to customize to meet specific requirements, meaning users will benefit from a more personalized and customizable social network.[4]
-
-There're different tools for the user-interface for web-applications: React, Angular, and Vue are all popular choices. I decided to use HTML/CSS for my project. There're several reasons behind: HTML/CSS's the foundation of the web and supported by all browsers, meaning that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS's highly customizable, and I can modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.[5]
+<p align="justify">
+  Application types include: web and mobile. Mobile applications can be accessed through only phones. This limits the number of people who can use the application. However, web-applications can be accessed through all electronic devices that have browsers. I want my application to be accessible for as many people as possible, so I decided to create a web-application.<br><br>
+There're number of tools available to create a web-application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python's an adequate language that has a wide range of libraries. This'll help to meet the requirements for my project as it's a large scale web-application. Secondly, Python has a built-in database-management system, allowing me to handle large amounts of data without concern, which's SQLAlchemy library.[2]<br><br>
+SQLAlchemy's a library that's compatible with different types of databases. This allows me not worrying about writing complicated SQL codes, but working with complex data models that my project requires. Therefore, users will benefit a social network that's efficient and user-friendly, with a database handling large amounts of data.[3]<br><br>
+There're several frameworks available written in the Python programming language for web-development. Well-known types of Python frameworks are Django and Flask.  
+The reason behind my decision's Flask provides high level flexibility, which's crucial for web-applications that have specific requirements. Unlike other rigid frameworks (Django), Flask can work with a variety of tools, making it easy to customize to meet specific requirements, meaning users will benefit from a more personalized and customizable social network.[4]<br><br>
+There're different tools for the user-interface for web-applications: React, Angular, and Vue are all popular choices. I decided to use HTML/CSS for my project.<br><br> There're several reasons behind: HTML/CSS's the foundation of the web and supported by all browsers, meaning that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS's highly customizable, and I can modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.[5]</p>
 
 <p align="right">
-  Word count: <strong>499 words</strong>
+  Word count: <strong>500 words</strong>
 </p>
 
 ### Success Criteria
-1. The platform provides a user registration feature, allowing users to create a personal account.
-2. Users can share recipes with each other through the platform's sharing functionality.
-3. The platform offers a restaurant review feature, allowing users to leave reviews and ratings for restaurants.
-4. Users are able to make edits to their own posts on the platform: modify and remove.
-5. The platform provides a search functionality that allows users to find and filter through recipes and restaurant reviews:
-
-    a) By A-Z
-
-    b) By date
-
-    c) By category
-
-6. The platform includes a feature that allows users to create and save lists of their favorite restaurants and dishes.
+1. *[issue tackled: “limited options to connect with others online using an application”]* The platform provides a user registration feature, allowing users to create a personal account.
+2. *[issue tackled: “to share culinary creations”]* Users can CRUD operations for recipe posts with each other through the platform's sharing functionality with following values:
+    - Name
+    - Ingredients
+    - Preparation
+3. *[issue tackled: “to share culinary creations, restaurant reviews”]* The platform offers CRUD operations for restaurant reviews, allowing users to leave reviews and ratings for restaurants with following values:
+    - Name
+    - Location
+    - Feedback
+    - Rate out of 10
+4. *[issue tackled: “following favorite users in the network”]* The platform provides a follow feature, enabling the network users to follow their favorite users.
+5. *[issue tackled: “difficulty finding recipes or restaurant recommendations”]* The platform provides a search functionality that allows users to find and filter through recipes and restaurant reviews:
+    - By A-Z
+    - By date
+    - By category
+6. *[issue tackled: “difficulties keeping notes of recipes or restaurant names on paper”]* The platform includes a feature that allows users to create and save lists of their favorite restaurants and dishes.
 
 # Criteria B: Design
 ## System Diagram
