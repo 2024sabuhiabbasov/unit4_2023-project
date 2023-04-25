@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        {% if title %}
+        <title>Foodie - {{ title }}</title>
+        {% else %}
+        <title>Foodie</title>
+        {% endif %}
+        <link rel="stylesheet" href="/static/my_style.css">
+        <link rel="stylesheet" href="/static/registration.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/my_style.css">
+    </head>
+    <body>
+        <div>
+            Foodie:
+            {% if login %}
+            <a href="/index">Home</a>
+            <a href="/logout">Log out</a>
+            {% else %}
+            <a href="/signup">Sign up</a>
+            {% endif %}
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
