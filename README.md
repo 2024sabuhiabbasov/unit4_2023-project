@@ -52,6 +52,8 @@ Explain how I was challenged and how I solved with explaining the lines of codes
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
 
+# Criteria
+
 # Appendix
 
 # Works cited
