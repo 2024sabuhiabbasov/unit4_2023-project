@@ -4,6 +4,9 @@
 body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, span, div, a {
   font-family: Arial, sans-serif;
 }
+body{
+    margin: 10px;
+}
 h1{
     text-align: center;
 }
@@ -48,4 +51,36 @@ h1{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+}
+
+.post-options-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-post-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.new-post-container p {
+    margin-right: 10px;
+    align-self: center;
+}
+
+.new-post-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+}
+
+.new-post-btn:hover {
+    background-color: #0056b3;
 }

@@ -2,5 +2,23 @@
 
 {% block content %}
     <h1>Hi, {{ user.username }}!</h1>
-    <h2>Posts by followed users</h2>
+
+    <div class="post-options-container">
+        <h2>Posts by followed users</h2>
+        <div class="post-options-container">
+            <p>New post:</p>
+            <a href="new-recipe.html"><button class="new-post-btn">Recipe</button></a>
+            <a href="new-review.html"><button class="new-post-btn">Restaurant Review</button></a>
+        </div>
+    </div>
+
+    {% for post in posts %}
+    <a href="post-page" target="_blank">
+    <div class="post">
+        <h2 class="post-title">{{ post.title}}</h2>
+        <p class="post-date">{{ post.date}}</p>
+        <p class="post-content">{{ post.content }}</p>
+    </div>
+    </a>
+    {% endfor %}
 {% endblock %}
