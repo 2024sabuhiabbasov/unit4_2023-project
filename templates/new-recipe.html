@@ -2,5 +2,33 @@
 
 {% block content %}
     <h1>New recipe</h1>
-
+    <form method=post enctype=multipart/form-data>
+        <dl>
+            <dt>Title:
+            <dd><input type=text name=title>
+            <dt>Ingredients:
+            <dd><input type=text name=ingredients>
+            <dt>Instructions:
+            <dd><input type=text name=instructions>
+            <dt>Image:
+            <dd><input type=file name=image>
+            <dt>Category:
+            <dd><input type=text name=category
+            <dt>Prep time:
+            <dd><input type=text name=prep_time>
+            <dt>Cook time:
+            <dd><input type=text name=cook_time>
+            <dt>Yield:
+            <dd><input type=text name=yield>
+            <dt>Source:
+            <dd><input type=text name=source>
+            <dt>Notes:
+            <dd><input type=text name=notes>
+            <dt>Rating:
+            <dd><input type=text name=rating>
+            <dt>Tags:
+            <dd><input type=text name=tags>
+        </dl>
+        <p><input type=submit value=Save>
+    </form>
 {% endblock %}

@@ -178,9 +178,8 @@ def signup():
 @app.route('/new-recipe', methods=['GET', 'POST'])
 @token_required
 def new_recipe():
-    if request.method == 'POST':
-
     return render_template('new-recipe.html', title='New Recipe')
+
 
 @app.route('/logout')
 def logout():
