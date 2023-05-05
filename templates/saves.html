@@ -1,15 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="post-options-container">
-        <h2>Posts by followed users</h2>
-        <div class="post-options-container">
-            <p>New post:</p>
-            <a href="new-recipe"><button class="new-post-btn">Recipe</button></a>
-            <a href="new-review.html"><button class="new-post-btn">Restaurant Review</button></a>
-        </div>
-    </div>
-
+    <h2>Saved posts</h2>
+    <p>{{ message }}</p>
     {% for post in posts %}
     <a href="{{ url_for('recipe_page', post_id=post[4]) }}">
     <div class="post">
@@ -22,3 +15,4 @@
     <hr>
     {% endfor %}
 {% endblock %}
+

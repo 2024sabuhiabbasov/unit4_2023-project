@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{ post[0] }}</h2>
+    <p>User: <a href="{{ url_for('profile', user_id=post[6]) }}">{{ post[1] }}</a></p>
+    <p>Date: {{ post[2] }}</p>
+    {% if save %}
+    <form action="{{ url_for('unsave_post') }}" method="POST">
+        <input type="hidden" name="post_id" value="{{ post[5] }}">
+        <button style="font-size:15px" type="submit"><i class="fa fa-bookmark"></i> Unsave post</button>
+    </form>
+    {% else %}
+    <form action="{{ url_for('save_post') }}" method="POST">
+        <input type="hidden" name="post_id" value="{{ post[5] }}">
+        <button style="font-size:15px" type="submit"><i class="fa fa-bookmark-o"></i> Save post</button>
+    {% endif %}
+    <p>Instructions: {{ post[3] }}</p>
+    <p>Ingredients:</p>
+    <ul>
+        {% for ingredient in post[4] %}
+            <li>{{ ingredient }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

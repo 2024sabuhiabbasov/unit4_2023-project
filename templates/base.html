@@ -6,6 +6,7 @@
         {% else %}
         <title>Foodie</title>
         {% endif %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/static/registration.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="/static/my_style.css">
@@ -25,8 +26,11 @@
             {% if login %}
             <a href="/index">Home</a>
             <a href="/explore">Explore</a>
-            <a href="/profile">Profile</a>
-            <a href="/logout">Log out</a>
+            <a href="/saves">Favorites</a>
+            <div align="right">
+                <a href="/profile-user">Profile</a>
+                <a href="/logout">Log out</a>
+            </div>
             {% else %}
             <a href="/signup">Sign up</a>
             {% endif %}
