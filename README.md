@@ -17,8 +17,8 @@
 ### Rationale for Proposed Solution
 <p align="justify">
   Application types include: web and mobile. Mobile applications can be accessed through only phones. This limits the number of people who can use the application. However, web-applications can be accessed through all electronic devices that have browsers. I want my application to be accessible for as many people as possible, so I decided to create a web-application.<br><br>
-There're number of tools available to create a web-application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python's an adequate language that has a wide range of libraries. This'll help to meet the requirements for my project as it's a large scale web-application. Secondly, Python has a built-in database-management system, allowing me to handle large amounts of data without concern, which's SQLAlchemy library.[2]<br><br>
-SQLAlchemy's a library that's compatible with different types of databases. This allows me not worrying about writing complicated SQL codes, but working with complex data models that my project requires. Therefore, users will benefit a social network that's efficient and user-friendly, with a database handling large amounts of data.[3]<br><br>
+There're number of tools available to create a web-application: JavaScript, Python, etc. For the functionality of my web-application, I decided to use Python. One of the reasons why Python's an adequate language that has a wide range of libraries. This'll help to meet the requirements for my project as it's a large scale web-application.[2]<br><br>
+SQL is designed to handle large amounts of data efficiently, making it an ideal choice for applications that need to store and manage a large amount of information. SQL databases allow for the storage of structured data, which can be easily queried. This makes SQL an adequate choice for applications that need to store critical data that must be maintained even in the event of failure.[3]<br><br>
 There're several frameworks available written in the Python programming language for web-development. Well-known types of Python frameworks are Django and Flask.  
 The reason behind my decision's Flask provides high level flexibility, which's crucial for web-applications that have specific requirements. Unlike other rigid frameworks (Django), Flask can work with a variety of tools, making it easy to customize to meet specific requirements, meaning users will benefit from a more personalized and customizable social network.[4]<br><br>
 There're different tools for the user-interface for web-applications: React, Angular, and Vue are all popular choices. I decided to use HTML/CSS for my project.<br><br> There're several reasons behind: HTML/CSS's the foundation of the web and supported by all browsers, meaning that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS's highly customizable, and I can modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.[5]</p>
@@ -99,7 +99,7 @@ Explain how I was challenged and how I solved with explaining the lines of codes
 
 [2]: PODGÓRSKI, PIOTR, and MICHAŁ SŁUPSKI. “Why Use Python for Web Development? Pros, Cons, and Business Benefits.” STX Next, https://www.stxnext.com/blog/python-for-web-development/. Accessed 4 April 2023.
 
-[3]: Kudari, Vinay. “Python SQLAlchemy: A Tutorial.” Built In, 10 November 2022, https://builtin.com/data-science/python-sqlalchemy. Accessed 4 April 2023.
+[3]: "SQL." W3Schools, https://www.w3schools.com/sql/. Accessed 4 April 2023.
 
 [4]: Holovaty, Adrian, and Simon Willison. “Flask Vs Django: Which Python Framework to Choose?” InterviewBit, 29 July 2022, https://www.interviewbit.com/blog/flask-vs-django/. Accessed 4 April 2023.
 
