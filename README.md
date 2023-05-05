@@ -24,7 +24,7 @@ The reason behind my decision's Flask provides high level flexibility, which's c
 There're different tools for the user-interface for web-applications: React, Angular, and Vue are all popular choices. I decided to use HTML/CSS for my project.<br><br> There're several reasons behind: HTML/CSS's the foundation of the web and supported by all browsers, meaning that my project will be accessible to a wider audience, regardless of their device or platform. Secondly, HTML/CSS's highly customizable, and I can modify the design and layout of my project to fit the specific requirements of my project. This means that users will benefit from a more user-friendly and visually appealing social network.[5]</p>
 
 <p align="right">
-  Word count: <strong>500 words</strong>
+  <i>Word count:</i> <strong>497 words</strong>
 </p>
 
 ### Success Criteria
