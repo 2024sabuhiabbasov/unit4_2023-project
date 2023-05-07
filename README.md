@@ -79,6 +79,7 @@ There're different tools for the user-interface for web-applications: React, Ang
 
 ## Flow Diagram
 ## ER Diagram
+![unit4ERdiagramSabu.jpg](assets%2Funit4ERdiagramSabu.jpg)
 <img src="https://user-images.githubusercontent.com/111758436/232424762-99f902f8-2ccc-4f16-a806-415555067f01.jpg" style="width:100%">
 <p align="justify">
   <i>Fig. 6</i>: Entity-Relationship (ER) diagram for the Foodie network's database, illustrating the relationships between the Users, Posts, and Comments tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship.
