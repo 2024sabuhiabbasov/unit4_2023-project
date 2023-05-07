@@ -9,6 +9,7 @@ import dotenv
 import os
 
 app = Flask(__name__)
+print(app.__class__.__name__)
 app.secret_key = 'you-will-never-guess'
 app.config['UPLOAD_FOLDER'] = 'upload_folder'
 

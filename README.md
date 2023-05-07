@@ -1,7 +1,7 @@
 # Foodie: A Social Network for Food Lovers
 <img src="https://user-images.githubusercontent.com/111758436/229414078-7b5067ff-7633-4fb9-9ec2-4d1091d0e5e3.png" style="width:100%">
 <p align="center">
-  <i>Fig. 1</i>: Using the prompt 'Generate a picture of a cozy kitchen with ingredients and utensils for cooking a delicious meal in a rustic and warm colors,' this image was generated using AI on Deep Dream Generator.[1]
+  Using the prompt 'Generate a picture of a cozy kitchen with ingredients and utensils for cooking a delicious meal in a rustic and warm colors,' this image was generated using AI on Deep Dream Generator.[1]
 </p>
 
 <!-- TOC -->
@@ -73,6 +73,8 @@ There're different tools for the user-interface for web-applications: React, Ang
 
 # Criteria B: Design
 ## System Diagram
+![sabubububu.png](assets%2Fsabubububu.png)
+_Figure 1:_ The system diagram for the application is illustrated in Figure 1. Data is stored in social_net.db, which is facilitated by the SQLite database engine. The arrows in the diagram indicate the flow of data between the various components of the application.
 ## Wireframe
 ![Wireframe](https://user-images.githubusercontent.com/111758436/233389705-16c7192e-3e8a-49ac-851c-233865cdb49f.png)
 <i>Figure 2</i> - The wireframe for the user interface is depicted in Figure 2. It shows how the website is going to look like after the development process.
@@ -101,6 +103,11 @@ There're different tools for the user-interface for web-applications: React, Ang
 
 
 ## UML Diagram
+![unit4_UML.jpeg](assets%2Funit4_UML.jpeg)
+<p align="center">
+  <i>Fig. 10</i>: The UML diagram in Figure 10 illustrates the class hierarchy used in the application.
+</p>
+
 ## Test plan
 ## Record of Tasks
 

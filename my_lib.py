@@ -1,6 +1,4 @@
-# my_lib.py
 
-# code for the database handler
 import sqlite3
 
 
