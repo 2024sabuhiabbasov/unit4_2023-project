@@ -86,6 +86,12 @@ _Figure 1:_ The system diagram for the application is illustrated in Figure 1. D
   <i>Figure 3</i> - The flow diagram for the follow feature is depicted in Figure 3. It shows how the follow feature is going to work.
 </p>
 
+### Flow Diagram 2 - Login Feature
+![login.jpeg](assets%2Flogin.jpeg)
+<p align="center">
+  <i>Figure 4</i> - The flow diagram for the login feature is depicted in Figure 4. It shows how the login feature is going to work.
+</p>
+
 ## ER Diagram
 ![unit4ERdiagramSabu.jpg](assets%2Funit4ERdiagramSabu.jpg)
 <p align="justify">
