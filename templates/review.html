@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{ post[1] }}</h2>
+    <p>User: <a href="{{ url_for('profile', user_id=post[6]) }}">{{ post[0] }}</a></p>
+    <p>Date: {{ post[3] }}</p>
+    <p>Location: {{ post[2] }}</p>
+    <p>Feedback: {{ post[4] }}</p>
+    <p>Rating: {{ post[5] }}</p>
+{% endblock %}
+
