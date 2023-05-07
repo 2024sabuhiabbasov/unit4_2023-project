@@ -158,7 +158,9 @@ def explore():
     user = db.search(query=query)
     if user:
         query_posts = f"SELECT title, user_id, DATE(timestamp), content, id, user_id from recipes"
+        query_reviews = f"SELECT name, user_id, DATE(timestamp), content, id, user_id from reviews"
         posts = db.search(query=query_posts)
+        reviews = db.search(query=query_reviews)
         for i in range(len(posts)):
             for j in range(len(posts[i])):
                 if j == 1:
@@ -168,8 +170,17 @@ def explore():
                     posts[i] = list(posts[i])
                     posts[i][j] = username[0][0]
                     posts[i] = tuple(posts[i])
+        for i in range(len(reviews)):
+            for j in range(len(reviews[i])):
+                if j == 1:
+                    reviews = list(reviews)
+                    user_id = reviews[i][j]
+                    query_username = f"SELECT username from users where id={user_id}"
+                    username = db.search(query=query_username)
+                    reviews[i] = list(reviews[i])
+                    reviews[i][j] = username[0][0]
         return render_template('explore.html', title='Explore', user=user, posts=posts,
-                               login=True, admin=user_id_title)
+                               login=True, admin=user_id_title, reviews=reviews)
     return render_template('explore.html', title='Explore', login=True, admin=user_id_title)
 
 
@@ -187,6 +198,19 @@ def delete_post(post_id):
         return redirect(url_for('index'))
     return redirect(url_for('index'))
 
+@app.route('/delete_review/<int:id>')
+@token_required
+def delete_review(id):
+    data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
+    user_id_title = data['user_id']
+    db = database_worker('social_net.db')
+    query = f"SELECT * from users where id={user_id_title}"
+    user = db.search(query=query)
+    if user:
+        query_post = f"DELETE from reviews where id={id}"
+        db.run_save(query=query_post)
+        return redirect(url_for('profile_user'))
+    return redirect(url_for('profile_user'))
 
 @app.route('/edit_post/<int:post_id>', methods=['GET', 'POST'])
 @token_required
@@ -204,9 +228,31 @@ def edit_post(post_id):
             query_post = f"UPDATE recipes set title='{title}', content='{content}', ingredients='{ingredients}' where id={post_id}"
             db.run_save(query=query_post)
             return redirect(url_for('index', user_id=user_id_title))
-        query_post = f"SELECT title, content, ingredients from recipes where id={post_id}"
+        query_post = f"SELECT title, content, ingredients, id from recipes where id={post_id}"
         post = db.search(query=query_post)
         return render_template('edit_post.html', title='Edit Post', user=user, post=post[0],
+                               login=True, user_id=user_id_title)
+
+@app.route('/edit_review/<int:id>', methods=['GET', 'POST'])
+@token_required
+def edit_review(id):
+    data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
+    user_id_title = data['user_id']
+    db = database_worker('social_net.db')
+    query = f"SELECT * from users where id={user_id_title}"
+    user = db.search(query=query)
+    if user:
+        if request.method == 'POST':
+            name = request.form['title']
+            location = request.form['restaurant_address']
+            content = request.form['content']
+            rating = request.form['rating']
+            query_post = f"UPDATE reviews set name='{name}', content='{content}', location='{location}', stars='{rating}' where id={id}"
+            db.run_save(query=query_post)
+            return redirect(url_for('profile_user', user_id=user_id_title))
+        query_post = f"SELECT name, location, content, stars, id from reviews where id={id}"
+        post = db.search(query=query_post)
+        return render_template('edit_review.html', title='Edit Review', user=user, post=post[0],
                                login=True, user_id=user_id_title)
 
 
@@ -259,7 +305,7 @@ def review(id):
         query_user = f"SELECT username from users where id={user_id}"
         username = db.search(query=query_user)
         post = list(post[0])
-        post[1] = username[0][0]
+        post[0] = username[0][0]
         post[6] = user_id
         post[4] = post[4].split(',')
         post = tuple(post)
@@ -269,9 +315,9 @@ def review(id):
             follow = True
         else:
             follow = False
-        return render_template('recipe-page.html', title=f'{post[0]}', post=post, login=True, user_id=user_id_title,
+        return render_template('review.html', title=f'{post[0]}', post=post, login=True, user_id=user_id_title,
                                    follow=follow)
-    return render_template('recipe-page.html', title=f'{post[0]}', login=True, user_id=user_id_title)
+    return render_template('review.html', title=f'{post[0]}', login=True, user_id=user_id_title)
 
 
 @app.route('/follow/<int:user_id>', methods=['GET', 'POST'])
@@ -385,7 +431,9 @@ def profile_user():
     if user:
         user = user[0]
         query_posts = f"SELECT title, user_id, DATE(timestamp), content, id from recipes where user_id={user_id}"
+        query_reviews = f"SELECT name, user_id, DATE(timestamp), content, id, user_id from reviews where user_id={user_id}"
         posts = db.search(query=query_posts)
+        reviews = db.search(query=query_reviews)
         for i in range(len(posts)):
             for j in range(len(posts[i])):
                 if j == 1:
@@ -395,8 +443,17 @@ def profile_user():
                     posts[i] = list(posts[i])
                     posts[i][j] = username[0][0]
                     posts[i] = tuple(posts[i])
+        for i in range(len(reviews)):
+            for j in range(len(reviews[i])):
+                if j == 1:
+                    reviews = list(reviews)
+                    user_id = reviews[i][j]
+                    query_username = f"SELECT username from users where id={user_id}"
+                    username = db.search(query=query_username)
+                    reviews[i] = list(reviews[i])
+                    reviews[i][j] = username[0][0]
         return render_template('profile-user.html', title=f'{user[0]}', user=user, posts=posts,
-                               login=True, user_id=user_id)
+                               login=True, user_id=user_id, reviews=reviews)
     return render_template('profile-user.html', title=f'{user[0]}', login=True, user=user, user_id=user_id)
 
 

@@ -25,4 +25,14 @@
     </a>
     <hr>
     {% endfor %}
+    {% for review in reviews %}
+    <a href="{{ url_for('review', id=review[4]) }}">
+    <div class="post">
+        <h2 class="post-title">{{ review[0]}}</h2>
+        <p class="post-author">{{ review[1]}}</p>
+        <p class="post-date">{{ review[2]}}</p>
+        <p class="post-content">{{ review[3] }}</p>
+    </div>
+    <hr>
+    {% endfor %}
 {% endblock %}

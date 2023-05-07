@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Edit review</h2>
+    <form method="post">
+        <div>
+            <label for="title">Name</label>
+            <input type="text" name="title" value="{{ post[0] }}" class="form-control" id="title" placeholder="Title">
+        </div>
+        <br>
+        <div>
+            <label for="restaurant_address">Address</label><br>
+            <textarea name="restaurant_address" id="restaurant_address" rows="1" cols="155" required>{{ post[1] }}</textarea>
+        </div>
+        <br>
+        <div>
+            <label for="content">Content</label>
+            <textarea name="content" class="form-control" id="content" placeholder="Content">{{ post[2] }}</textarea>
+        </div>
+        <br>
+        <div>
+            <label for="rating">Rating</label>
+            <textarea name="rating" class="form-control" id="rating" placeholder="Rating">{{ post[3] }}</textarea>
+        </div>
+        <br>
+        <a href="{{ url_for('review', id=post[4]) }}">Cancel</a>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdhZHO7d42wflknrPzu_2y79NFOMAX350&libraries=places"></script>
+    <script>
+        var input = document.getElementById('restaurant_address');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+    </script>
+{% endblock %}
