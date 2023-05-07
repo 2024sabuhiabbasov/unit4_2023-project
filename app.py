@@ -182,7 +182,8 @@ def explore():
                     reviews[i][j] = username[0][0]
         return render_template('explore.html', title='Explore', user=user, posts=posts,
                                login=True, admin=user_id_title, reviews=reviews)
-    return render_template('explore.html', title='Explore', login=True, admin=user_id_title)
+    return render_template('explore.html', title='follExplore', login=True,
+                           admin=user_id_title)
 
 
 @app.route('/delete_post/<int:post_id>')

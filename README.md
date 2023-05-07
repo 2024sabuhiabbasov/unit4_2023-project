@@ -80,6 +80,12 @@ _Figure 1:_ The system diagram for the application is illustrated in Figure 1. D
 <i>Figure 2</i> - The wireframe for the user interface is depicted in Figure 2. It shows how the website is going to look like after the development process.
 
 ## Flow Diagram
+### Flow Diagram 1 - Follow Feature
+![follow.jpeg](assets%2Ffollow.jpeg)
+<p align="center">
+  <i>Figure 3</i> - The flow diagram for the follow feature is depicted in Figure 3. It shows how the follow feature is going to work.
+</p>
+
 ## ER Diagram
 ![unit4ERdiagramSabu.jpg](assets%2Funit4ERdiagramSabu.jpg)
 <p align="justify">
