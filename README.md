@@ -16,6 +16,9 @@
   * [System Diagram](#system-diagram)
   * [Wireframe](#wireframe)
   * [Flow Diagram](#flow-diagram)
+    * [Flow Diagram 1 - Follow Feature](#flow-diagram-1---follow-feature)
+    * [Flow Diagram 2 - Login Feature](#flow-diagram-2---login-feature)
+    * [Flow Diagram 3 - New Review Feature](#flow-diagram-3---new-review-feature)
   * [ER Diagram](#er-diagram)
   * [UML Diagram](#uml-diagram)
   * [Test plan](#test-plan)
@@ -90,6 +93,12 @@ _Figure 1:_ The system diagram for the application is illustrated in Figure 1. D
 ![login.jpeg](assets%2Flogin.jpeg)
 <p align="center">
   <i>Figure 4</i> - The flow diagram for the login feature is depicted in Figure 4. It shows how the login feature is going to work.
+</p>
+
+### Flow Diagram 3 - New Review Feature
+![new_review.jpeg](assets%2Fnew_review.jpeg)
+<p align="center">
+  <i>Figure 5</i> - The flow diagram for the new review feature is depicted in Figure 5. It shows how the new review feature is going to work.
 </p>
 
 ## ER Diagram

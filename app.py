@@ -667,16 +667,11 @@ def new_review():
         feedback = request.form['feedback']
         rate = request.form['rating']
         db = database_worker('social_net.db')
-        query = f"SELECT * from users where id={user_id}"
-        user = db.search(query=query)
-        if user:
-            print("User found.")
-            query_new_review = f"INSERT into reviews(name, location, content, stars, user_id, timestamp) values('{restaurant_name}', '{location}', '{feedback}', '{rate}', '{user_id}', '{datetime.now()}' )"
-            db.run_save(query=query_new_review)
-            flash('Review added.', 'success')
-            print("Review added.")
-            return redirect(url_for('index'))
-        return render_template('index.html', messages=get_flashed_messages(), user=user, user_id=user_id, login=True)
+        query_new_review = f"INSERT into reviews(name, location, content, stars, user_id, timestamp) values('{restaurant_name}', '{location}', '{feedback}', '{rate}', '{user_id}', '{datetime.now()}' )"
+        db.run_save(query=query_new_review)
+        flash('Review added.', 'success')
+        print("Review added.")
+        return redirect(url_for('index'))
     return render_template('new_review.html', title='New Restaurant Review',
                            login=True, messages=get_flashed_messages(),
                            user_id=user_id)
