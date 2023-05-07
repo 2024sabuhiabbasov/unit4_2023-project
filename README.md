@@ -71,7 +71,7 @@ There're different tools for the user-interface for web-applications: React, Ang
 6. _[issue tackled: “seeing only their sharings”]_ The platform allows users to see their favorite users’ posts separated from everyone’s.
 
 
-# Criteria B: Desig
+# Criteria B: Design
 ## System Diagram
 ## Wireframe
 ![Wireframe](https://user-images.githubusercontent.com/111758436/233389705-16c7192e-3e8a-49ac-851c-233865cdb49f.png)
