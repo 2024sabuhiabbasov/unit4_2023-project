@@ -83,17 +83,20 @@ There're different tools for the user-interface for web-applications: React, Ang
 <p align="justify">
   <i>Fig. 6</i>: Entity-Relationship (ER) diagram for the Foodie network's database, illustrating the relationships between the recipes, users, reviews, and saves tables. The diagram displays one-to-many relationships using lines starting with '1' and ending with 'N', indicating the cardinality of each relationship.
 </p>
+
 <img src="https://user-images.githubusercontent.com/111758436/229475239-904e430d-e67b-4f0e-b90f-c0bf1caf982a.png" style="width:100%">
 <p align="center">
   <i>Fig. 7</i>: Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
 </p>
-<img src="https://user-images.githubusercontent.com/111758436/229518547-acdfb0b0-8905-442c-951a-038e89c16932.png" style="width:100%">
+
+![img.png](assets%2Fimg_1.png)
 <p align="center">
-  <i>Fig. 8</i>: Example Data in Posts Table (Note: All information is fake and does not represent real posts or their authors)
+  <i>Fig. 8</i>: Example Data in recipes Table (Note: All information is fake and does not represent real posts or their authors)
 </p>
-<img src="https://user-images.githubusercontent.com/111758436/229649561-11764057-4ff2-430c-ba24-d151bcecba67.png" style="width:100%">
+
+![img.png](assets%2Fimg.png)
 <p align="center">
-  <i>Fig. 9</i>: Example Data in Comments Table (Note: All information is fake and does not represent real comments or their authors)
+  <i>Fig. 9</i>: Example Data in reviews Table (Note: All information is fake and does not represent real comments or their authors)
 </p>
 
 
