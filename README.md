@@ -86,7 +86,7 @@ There're different tools for the user-interface for web-applications: React, Ang
 
 <img src="https://user-images.githubusercontent.com/111758436/229475239-904e430d-e67b-4f0e-b90f-c0bf1caf982a.png" style="width:100%">
 <p align="center">
-  <i>Fig. 7</i>: Example Data in Users Table (Note: All information is fake and does not represent real individuals or their personal information)
+  <i>Fig. 7</i>: Example Data in users Table (Note: All information is fake and does not represent real individuals or their personal information)
 </p>
 
 ![img.png](assets%2Fimg_1.png)
