@@ -88,6 +88,7 @@ def create_database():
         timestamp TEXT,
         stars INTEGER,
         content TEXT,
+        location TEXT,
         user_id INTEGER,
         FOREIGN KEY (user_id) REFERENCES users(id) on delete cascade
     )
@@ -105,7 +106,7 @@ def create_database():
 @app.route('/index')
 @token_required
 def index():
-    global posts
+    global posts, reviews
     data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
     user_id_title = data['user_id']
     db = database_worker('social_net.db')
@@ -119,7 +120,9 @@ def index():
         followed = tuple(followed)
         for i in followed:
             query_posts = f"SELECT title, user_id, DATE(timestamp), content, id, user_id from recipes where user_id={i}"
+            query_reviews = f"SELECT name, user_id, DATE(timestamp), content, id, user_id from reviews where user_id={i}"
             posts = db.search(query=query_posts)
+            reviews = db.search(query=query_reviews)
             print(posts)
             for i in range(len(posts)):
                 for j in range(len(posts[i])):
@@ -130,8 +133,18 @@ def index():
                         username = db.search(query=query_username)
                         posts[i] = list(posts[i])
                         posts[i][j] = username[0][0]
+
+            for i in range(len(reviews)):
+                for j in range(len(reviews[i])):
+                    if j == 1:
+                        reviews = list(reviews)
+                        user_id = reviews[i][j]
+                        query_username = f"SELECT username from users where id={user_id}"
+                        username = db.search(query=query_username)
+                        reviews[i] = list(reviews[i])
+                        reviews[i][j] = username[0][0]
         return render_template('index.html', title='Home', login=True, user_id=user_id_title, user=user,
-                               posts=posts)
+                               posts=posts, reviews=reviews)
     return render_template('index.html', title='Home', login=True, user_id=user_id_title, user=user)
 
 
@@ -159,6 +172,7 @@ def explore():
                                login=True, admin=user_id_title)
     return render_template('explore.html', title='Explore', login=True, admin=user_id_title)
 
+
 @app.route('/delete_post/<int:post_id>')
 @token_required
 def delete_post(post_id):
@@ -170,8 +184,9 @@ def delete_post(post_id):
     if user:
         query_post = f"DELETE from recipes where id={post_id}"
         db.run_save(query=query_post)
-        return redirect(url_for('index', user_id=user_id_title))
-    return redirect(url_for('index', user_id=user_id_title))
+        return redirect(url_for('index'))
+    return redirect(url_for('index'))
+
 
 @app.route('/edit_post/<int:post_id>', methods=['GET', 'POST'])
 @token_required
@@ -193,6 +208,7 @@ def edit_post(post_id):
         post = db.search(query=query_post)
         return render_template('edit_post.html', title='Edit Post', user=user, post=post[0],
                                login=True, user_id=user_id_title)
+
 
 @app.route('/recipe/<int:post_id>')
 @token_required
@@ -229,6 +245,34 @@ def recipe_page(post_id):
                                follow=follow, save=saved)
     return render_template('recipe-page.html', title=f'{post[0]}', login=True, user_id=user_id_title, save=saved)
 
+@app.route('/review/<int:id>')
+@token_required
+def review(id):
+    data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
+    user_id_title = data['user_id']
+    query = f"SELECT user_id, name, location, DATE(timestamp), content, stars, id, user_id from reviews where id={id}"
+    db = database_worker('social_net.db')
+    post = db.search(query=query)
+    post_id = post[0][6]
+    if post:
+        user_id = post[0][0]
+        query_user = f"SELECT username from users where id={user_id}"
+        username = db.search(query=query_user)
+        post = list(post[0])
+        post[1] = username[0][0]
+        post[6] = user_id
+        post[4] = post[4].split(',')
+        post = tuple(post)
+        query_follow = f"SELECT * from follow where follower={user_id_title} and followed={post[6]}"
+        follow = db.search(query=query_follow)
+        if follow:
+            follow = True
+        else:
+            follow = False
+        return render_template('recipe-page.html', title=f'{post[0]}', post=post, login=True, user_id=user_id_title,
+                                   follow=follow)
+    return render_template('recipe-page.html', title=f'{post[0]}', login=True, user_id=user_id_title)
+
 
 @app.route('/follow/<int:user_id>', methods=['GET', 'POST'])
 @token_required
@@ -258,6 +302,7 @@ def unfollow(user_id):
         query_follow = f"DELETE FROM follow WHERE follower={follower} and followed={user_id}"
         db.run_save(query=query_follow)
         flash('You are not following this user anymore', 'success')
+        return redirect(url_for('profile', user_id=user_id))
         return redirect(url_for('profile', user_id=user_id))
     return redirect(url_for('profile', user_id=user_id))
 
@@ -543,11 +588,38 @@ def new_recipe():
             db.run_save(query=query_new_recipe)
             flash('Recipe added.', 'success')
             print("Recipe added.")
-            return render_template('index.html', messages=get_flashed_messages(), user=user, user_id=user_id,
-                                   login=True)
+            return redirect(url_for('index'))
         return render_template('index.html', messages=get_flashed_messages(), user=user, user_id=user_id, login=True)
     return render_template('new-recipe.html', title='New Recipe',
                            ingredients_list=ingredients_list, login=True, messages=get_flashed_messages(),
+                           user_id=user_id)
+
+
+@app.route('/new_review', methods=['GET', 'POST'])
+@token_required
+def new_review():
+    print("In new_restaurant_review")
+    data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
+    user_id = data['user_id']
+    if request.method == 'POST':
+        print("In POST")
+        restaurant_name = request.form['restaurant_name']
+        location = request.form['restaurant_address']
+        feedback = request.form['feedback']
+        rate = request.form['rating']
+        db = database_worker('social_net.db')
+        query = f"SELECT * from users where id={user_id}"
+        user = db.search(query=query)
+        if user:
+            print("User found.")
+            query_new_review = f"INSERT into reviews(name, location, content, stars, user_id, timestamp) values('{restaurant_name}', '{location}', '{feedback}', '{rate}', '{user_id}', '{datetime.now()}' )"
+            db.run_save(query=query_new_review)
+            flash('Review added.', 'success')
+            print("Review added.")
+            return redirect(url_for('index'))
+        return render_template('index.html', messages=get_flashed_messages(), user=user, user_id=user_id, login=True)
+    return render_template('new_review.html', title='New Restaurant Review',
+                           login=True, messages=get_flashed_messages(),
                            user_id=user_id)
 
 
@@ -567,6 +639,7 @@ def save_post():
         db.run_save(query=query_save)
         flash('Recipe saved.', 'success')
         print("Recipe saved.")
+        return redirect(url_for('recipe_page', post_id=post_id, save=True, user=user, user_id=user_id))
     return render_template('index.html', messages=get_flashed_messages(), user=user, login=True, user_id=user_id)
 
 
@@ -584,6 +657,7 @@ def unsave_post():
         db.run_save(query=query_unsave)
         flash('Recipe unsaved.', 'success')
         print("Recipe unsaved.")
+        return redirect(url_for('recipe_page', post_id=post_id, save=False, user=user, user_id=user_id))
     return render_template('index.html', messages=get_flashed_messages(), user=user, login=True, user_id=user_id)
 
 
@@ -596,4 +670,4 @@ def logout():
 create_database()
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

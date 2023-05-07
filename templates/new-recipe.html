@@ -2,33 +2,42 @@
 
 {% block content %}
     <h1>New recipe</h1>
-    <form method=post enctype=multipart/form-data>
-        <dl>
-            <dt>Title:
-            <dd><input type=text name=title>
-            <dt>Ingredients:
-            <dd><input type=text name=ingredients>
-            <dt>Instructions:
-            <dd><input type=text name=instructions>
-            <dt>Image:
-            <dd><input type=file name=image>
-            <dt>Category:
-            <dd><input type=text name=category
-            <dt>Prep time:
-            <dd><input type=text name=prep_time>
-            <dt>Cook time:
-            <dd><input type=text name=cook_time>
-            <dt>Yield:
-            <dd><input type=text name=yield>
-            <dt>Source:
-            <dd><input type=text name=source>
-            <dt>Notes:
-            <dd><input type=text name=notes>
-            <dt>Rating:
-            <dd><input type=text name=rating>
-            <dt>Tags:
-            <dd><input type=text name=tags>
-        </dl>
-        <p><input type=submit value=Save>
-    </form>
+        <form action="{{ url_for('new_recipe') }}" method="POST">
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" name="recipe_name" /><br/>
+
+            <label for="recipe-instructions">Instructions:</label>
+            <textarea id="recipe-instructions" name="recipe_instructions" rows="4" cols="50"></textarea><br />
+
+            <label for="recipe-ingredients">Ingredients:</label>
+            <input type="text" id="ingredient-search" name="ingredient_search" onkeyup="searchIngredients()"><br>
+
+            <div id="ingredient-list">
+              {% for ingredient in ingredients_list %}
+                <label class="ingredient-checkbox">
+                  <input type="checkbox" name="ingredient" value="{{ ingredient }}">
+                  {{ ingredient }}
+                </label>
+              {% endfor %}
+            </div>
+            <input type="submit" value="Submit" />
+
+        </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    function searchIngredients() {
+      var searchTerm = $("#ingredient-search").val().toLowerCase();
+      $(".ingredient-checkbox").each(function() {
+        var ingredientName = $(this).text().toLowerCase();
+        if (ingredientName.indexOf(searchTerm) >= 0) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+    </script>
+
 {% endblock %}
+
