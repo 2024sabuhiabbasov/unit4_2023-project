@@ -4,6 +4,34 @@
   <i>Fig. 1</i>: Using the prompt 'Generate a picture of a cozy kitchen with ingredients and utensils for cooking a delicious meal in a rustic and warm colors,' this image was generated using AI on Deep Dream Generator.[1]
 </p>
 
+<!-- TOC -->
+* [Foodie: A Social Network for Food Lovers](#foodie-a-social-network-for-food-lovers)
+* [Criteria A: Planning](#criteria-a-planning)
+  * [Problem Definition](#problem-definition)
+  * [Proposed Solution](#proposed-solution)
+    * [Design Statement](#design-statement)
+    * [Rationale for Proposed Solution](#rationale-for-proposed-solution)
+    * [Success Criteria](#success-criteria)
+* [Criteria B: Design](#criteria-b-design)
+  * [System Diagram](#system-diagram)
+  * [Wireframe](#wireframe)
+  * [Flow Diagram](#flow-diagram)
+  * [ER Diagram](#er-diagram)
+  * [UML Diagram](#uml-diagram)
+  * [Test plan](#test-plan)
+  * [Record of Tasks](#record-of-tasks)
+* [Criteria C: Development](#criteria-c-development)
+  * [Existing tools](#existing-tools)
+  * [List of techniques used](#list-of-techniques-used)
+  * [Development](#development)
+* [Criteria D: Functionality](#criteria-d-functionality)
+  * [A video demonstrating the proposed solution with narration](#a-video-demonstrating-the-proposed-solution-with-narration)
+* [Criteria](#criteria)
+* [Appendix](#appendix)
+  * [Evidence of consultation](#evidence-of-consultation)
+* [Works cited](#works-cited)
+<!-- TOC -->
+
 # Criteria A: Planning
 ## Problem Definition
 <p align="justify">As a food lover, I've identified a problem where there's no dedicated social network for food enthusiasts. We’ve limited options to connect with others online using an application, to share culinary creations, restaurant reviews, and difficulty finding recipes or restaurant recommendations. Additionally, I've had difficulties keeping notes of recipes or restaurant names on paper. Through research and consultations with others (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a> in Appendix), I've found a need for a social network for food lovers. Existing food-related websites (Yelp: it doesn't allow sharing and discovery of recipes) and apps don't meet the needs of this community. I've tried them, but they lack specific features for food lovers (eg. following favorite users in the network).</p>
