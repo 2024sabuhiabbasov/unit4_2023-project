@@ -55,7 +55,7 @@ There're different tools for the user-interface for web-applications: React, Ang
   <i>Word count:</i> <strong>495 words</strong>
 </p>
 
-### Success Criteri
+### Success Criteria
 1. *[issue tackled: “limited options to connect with others online using an application”]* The platform provides a user registration feature, allowing users to create a personal account.
 2. *[issue tackled: “to share culinary creations”]* Users can CRUD operations for recipe posts with each other through the platform's sharing functionality with following values:
     - Name
