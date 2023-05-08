@@ -266,6 +266,27 @@ The `type` attribute of the input field is set to  `text`, which means that the 
 
 I was challenged to create a text field with dynamic search. After doing some research[28] I learned how to do it. So the `onkeyup` attribute is an event handler that fires a function called `searchIngredients()` whenever the user types a key into the input field. This allows for dynamic searching as the user types, without having to submit the form each time
 
+```.html
+<script>
+    function searchIngredients() {
+      var searchTerm = $("#ingredient-search").val().toLowerCase();
+      $(".ingredient-checkbox").each(function() {
+        var ingredientName = $(this).text().toLowerCase();
+        if (ingredientName.indexOf(searchTerm) >= 0) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+</script>
+```
+The function first retrieves the value of the input field, converts it to lowercase, and stores it in a variable called `searchTerm`.
+
+The function then iterates over all HTML elements on the page with the class `ingredient-checkbox`, using the jQuery `.each()` method. For each of these elements, the function retrieves the text content of the element, converts it to lowercase, and stores it in a variable called `ingredientName`.
+
+The function then checks whether `searchTerm` is a substring of `ingredientName`, using the `indexOf()` method. If `searchTerm` is found within `ingredientName`, the function sets the element's `display` property to `block` (i.e. the element is displayed). If `searchTerm` is not found within `ingredientName`, the function sets the element's `display` property to `none` (i.e. the element is hidden).
+
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
 
