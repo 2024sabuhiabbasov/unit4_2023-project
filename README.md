@@ -288,6 +288,11 @@ The function then iterates over all HTML elements on the page with the class `in
 The function then checks whether `searchTerm` is a substring of `ingredientName`, using the `indexOf()` method. If `searchTerm` is found within `ingredientName`, the function sets the element's `display` property to `block` (i.e. the element is displayed). If `searchTerm` is not found within `ingredientName`, the function sets the element's `display` property to `none` (i.e. the element is hidden).
 
 `<script>` element in HTML is used to embed or reference client-side scripts, typically JavaScript, in an HTML document. These scripts can be used to add interactivity, functionality, and dynamic behavior to the web page, like I do for dynamic search in my ingredients input.
+```.py
+query = f"SELECT title, user_id, DATE(timestamp), content, ingredients, id, user_id from recipes where id={post_id}"
+```
+This SQL query is used to retrieve the post information of a specific post with `post_id` from the recipes table. The `DATE()` function in SQL is used to extract the date part of a datetime expression, such as a timestamp. It returns the date in the format `YYYY-MM-DD`.
+ 
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
