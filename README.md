@@ -264,7 +264,7 @@ This code creates a label and an input field for the user to search for ingredie
 
 The `type` attribute of the input field is set to  `text`, which means that the user can enter text into it. The `id` attribute specifies the unique identifier for the input field, and the `name` attribute specifies the name of the field as it will appear in the form data when the user submits the form.
 
-I was challenged to create a text field with dynamic search. After doing some research[28] I learned how to do it. So the `onkeyup` attribute is an event handler that fires a function called `searchIngredients()` whenever the user types a key into the input field. This allows for dynamic searching as the user types, without having to submit the form each time
+I was challenged to create a text field with dynamic search. After doing some research[28] I learned how to do it. So the `onkeyup` attribute is an event handler that fires a function called `searchIngredients()` whenever the user types a key into the input field. This allows for dynamic searching as the user types, without having to submit the form each time.
 
 ```.html
 <script>
@@ -318,6 +318,16 @@ So in this part of the code, I am creating a `hyperlink` that displays the autho
 To display the author's name, I am using the `post[1]` value which I previously extracted and updated to display the actual username instead of the user ID. By placing the hyperlink within a `<p>` element, I am able to display the author's name and provide a clickable link to their profile page.
 
 `url_for` is a function in Flask that generates a URL to a given function or endpoint in the application. It takes the name of the endpoint as its first argument and any additional keyword arguments that correspond to variables used in the endpoint's URL rule. This function is used in Flask applications to create links between different pages, like I do go from the recipe page to the profile page.
+
+```.html
+<p>Ingredients:</p>
+    <ul>
+        {% for ingredient in post[4] %}
+            <li>{{ ingredient }}</li>
+        {% endfor %}
+    </ul>
+```
+So, I needed to display the list of ingredients associated with a recipe on the post page. To do this, I first added an HTML `<p>` tag with the text "Ingredients:". Next, I added an HTML `<ul>` tag to create an unordered list. Within this tag, I used a for loop in Jinja to iterate over each ingredient in the list of ingredients associated with the recipe (stored in `post[4]`). For each ingredient, I used an HTML `<li>` tag to display the ingredient text.
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
