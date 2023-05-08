@@ -160,8 +160,29 @@ Code Review	|	Reviewing Code	|	Review the entire codebase, identifying and remov
 
 # Criteria C: Development
 ## Existing tools
+
+| Software/Development tools | Coding Structure Tools        | Libraries       |
+|----------------------------|-------------------------------|-----------------|
+| PyCharm[6]                 | ORM (Object Relation Mapping) | flask[11]       |
+| Python[7]                  | SQL requests                  | sqlite3[12]     |
+| SQLite[8]                  | Databases                     | passlib[13]     |
+| Github Copilot[9]          | Encryption                    | functools[14]   |
+| CodeGPT[10]                | For loops                     |jwt[15]          |
+|                            | If-else statements            |dotenv[16]       |
+|                            |                               |werkzeug.utils[17] |
+|                            |                               |os[18]    |
+|                            |                               |datetime[19]|
+
+
 ## List of techniques used
-No definition!  
+1. If-else statements[20]
+2. Loops[21]
+3. Functions[22]
+4. Variables[23]
+5. Lists[24]
+6. Objects[25]
+7. Classes[26]
+
 ## Development
 Explain how I was challenged and how I solved with explaining the lines of codes.
 
@@ -187,3 +208,45 @@ Explain how I was challenged and how I solved with explaining the lines of codes
 [4]: Holovaty, Adrian, and Simon Willison. “Flask Vs Django: Which Python Framework to Choose?” InterviewBit, 29 July 2022, https://www.interviewbit.com/blog/flask-vs-django/. Accessed 4 April 2023.
 
 [5]: CodeClan Team. “Top 5 reasons you should learn HTML & CSS.” CodeClan, 18 September 2020, https://codeclan.com/blog/top-5-reasons-you-should-learn-html-css/. Accessed 4 April 2023.
+
+[6]: JetBrains. PyCharm Professional. Version 2023.3.2, JetBrains, 2023. Accessed Mar. 7 2023
+
+[7]: "Python." Wikipedia, Wikimedia Foundation, https://en.wikipedia.org/wiki/Python. Accessed 7 Mar. 2023.
+
+[8]: "SQL." W3Schools, https://www.w3schools.com/sql/. Accessed 7 Mar. 2023.
+
+[9]: OpenAI. GitHub Copilot. Beta release, OpenAI, 2022. Accessed Mar. 7 2023
+
+[10]: CodeGPT Documentation. Edited by OpenAI, 2021, https://code-gpt-docs.vercel.app/. Accessed Mar. 7 2023
+
+[11]: Welcome to Flask — Flask Documentation (2.3.x). flask.palletsprojects.com/en/2.3.x. Accessed 4 April 2023.
+
+[12]: SQLite. "SQLite Home Page." SQLite, https://www.sqlite.org/. Accessed Mar. 7 2023
+
+[13]: Passlib. "Passlib Documentation." Read the Docs, https://passlib.readthedocs.io/en/stable/. Accessed Mar. 7 2023
+
+[14]: “Functools — Higher-order Functions and Operations on Callable Objects.” Python Documentation, https://docs.python.org/3/library/functools.html. Accessed 4 April 2023.
+
+[15]: “Jwt.” PyPI, 7 Oct. 2021, https://pypi.org/project/jwt. Accessed 4 April 2023.
+
+[16]: “Python-dotenv.” PyPI, 24 Feb. 2023, https://pypi.org/project/python-dotenv. Accessed 4 April 2023.
+
+[17]: “Werkzeug.” PyPI, 2 May 2023, https://pypi.org/project/Werkzeug. Accessed 4 April 2023.
+
+[18]: “Os — Miscellaneous Operating System Interfaces.” Python Documentation, https://docs.python.org/3/library/os.html. Accessed 4 April 2023.
+
+[19]: “Datetime — Basic Date and Time Types.” Python Documentation, https://docs.python.org/3/library/datetime.html. Accessed 4 April 2023.
+
+[20]: "4.1. if Statements." Python 3.10.1 Documentation, Python Software Foundation, 2022, Accessed 7 Mar. 2023. 
+
+[21]: Python Library. “Chapter 5: Loops.” Python 101, pythonlibrary.org, Accessed 7 Mar. 2023. 
+
+[22]: "Functions." Easy Python Docs, Easy Python, 2023, Accessed 7 Mar. 2023. https://www.easypythondocs.com/functions.html.
+
+[23]: "Variables." Easy Python Docs, Easy Python Docs, n.d., https://www.easypythondocs.com/variables.html. Accessed 7 Mar. 2023.
+
+[24]: Code Fellows. “Python Data Structures: Arrays and Lists.” Code Fellows, n.d., https://codefellows.github.io/sea-python-401d4/lectures/array.html. Accessed 7 Mar. 2023.
+
+[25]: Python Software Foundation. "Objects, Values, and Types." Python 3.9.7 documentation, 2021, https://docs.python.org/3/reference/datamodel.html#objects-values-and-types. Accessed 7 Mar. 2023.
+
+[26]: Python Software Foundation. “9. Classes.” Python 3.10.0 documentation, Python Software Foundation, 2021, https://docs.python.org/3/tutorial/classes.html. Accessed 7 Mar. 2023.
