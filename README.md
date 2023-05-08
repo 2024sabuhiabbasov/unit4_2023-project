@@ -273,7 +273,7 @@ I was challenged to create a text field with dynamic search. After doing some re
 
 # Appendix
 ## Evidence of consultation
-![unit-4-problem-consultation](https://user-images.githubusercontent.com/111758436/230363742-b80cf48b-731d-4559-b3d3-5e9a917fade9.png)
+![Untitled design](https://user-images.githubusercontent.com/111758436/236893612-084ad4ab-47fc-476c-b162-9e15fdb2bad3.png)
 <p align="justify">
   I spoke with my friend, who is also a food enthusiast, about the challenges we face in connecting with others online and sharing our culinary creations. During our chat, we discussed the need for a dedicated social network for food lovers, and I captured this screenshot to illustrate our conversation.
 </p>
