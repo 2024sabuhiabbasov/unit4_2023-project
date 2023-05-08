@@ -287,6 +287,8 @@ The function then iterates over all HTML elements on the page with the class `in
 
 The function then checks whether `searchTerm` is a substring of `ingredientName`, using the `indexOf()` method. If `searchTerm` is found within `ingredientName`, the function sets the element's `display` property to `block` (i.e. the element is displayed). If `searchTerm` is not found within `ingredientName`, the function sets the element's `display` property to `none` (i.e. the element is hidden).
 
+`<script>` element in HTML is used to embed or reference client-side scripts, typically JavaScript, in an HTML document. These scripts can be used to add interactivity, functionality, and dynamic behavior to the web page, like I do for dynamic search in my ingredients input.
+
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
 
