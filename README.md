@@ -184,7 +184,40 @@ Code Review	|	Reviewing Code	|	Review the entire codebase, identifying and remov
 7. Classes[26]
 
 ## Development
-Explain how I was challenged and how I solved with explaining the lines of codes.
+### Success criteria 1: The platform provides a user registration feature, allowing users to create a personal account.
+```.html
+<form method="post">
+    <div class="card-body">
+        <h2 class="text-center">Signup form</h2>
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+        </div>
+        <div class="form-group">
+            <select id="country" name="country" class="form-control">
+                <option value="Afghanistan">Afghanistan</option>
+                <!-- The rest of the countries with alphabetical order -->
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+        </div>
+        <button type="submit" id="button" class="btn btn-primary deep-purple btn-block ">Submit</button>
+    </div>
+</form>
+```
+This snippet of code shows the registration form. To get data from an HTML page in my Python code, I use `request` function that is a built-in function in Flask library. Forms have two methods: `methods=['GET', 'POST']`. To check if the user has tried to submit the form, I use `if request.method == 'POST'` in my Python codes. As you can see in the first line of my code above, by using `method="post"`, I specify the type of the form I want to use.
+
+```.py
+def signup():
+    if request.method == "POST":
+        name = request.form['name']
+        country = request.form['country']
+```
+Here you can see I try to get the values typed in the registration form. As it is written as dictionary elements (`request.form['name']`), we can see that `form` returns us a dictiniory of the typed values in the form.
+```.html
+<input type="text" id="name" placeholder="Enter name" name="name">
+```
+One interesting thing to note is the use of the name attribute in each input field in my HTML code. This attribute is essential for identifying the form data when it is submitted to the server as we need it to call the value from the dictionary variable.
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
