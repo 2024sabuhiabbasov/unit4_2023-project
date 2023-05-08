@@ -168,7 +168,7 @@ Code Review	|	Reviewing Code	|	Review the entire codebase, identifying and remov
 | SQLite[8]                  | Databases                     | passlib[13]     |
 | Github Copilot[9]          | Encryption                    | functools[14]   |
 | CodeGPT[10]                | For loops                     |jwt[15]          |
-|                            | If-else statements            |dotenv[16]       |
+| Jinja[27]                  | If-else statements            |dotenv[16]       |
 |                            |                               |werkzeug.utils[17] |
 |                            |                               |os[18]    |
 |                            |                               |datetime[19]|
@@ -212,12 +212,49 @@ def signup():
     if request.method == "POST":
         name = request.form['name']
         country = request.form['country']
+    # The rest will be shown as I explain further
 ```
 Here you can see I try to get the values typed in the registration form. As it is written as dictionary elements (`request.form['name']`), we can see that `form` returns us a dictiniory of the typed values in the form.
 ```.html
 <input type="text" id="name" placeholder="Enter name" name="name">
 ```
 One interesting thing to note is the use of the name attribute in each input field in my HTML code. This attribute is essential for identifying the form data when it is submitted to the server as we need it to call the value from the dictionary variable.
+```.py
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == "POST":
+        name = request.form['name']
+        country = request.form['country']
+    # The rest will be shown as I explain further
+```
+Using the `@app.route('/signup', methods=['GET', 'POST'])` code in my Flask application file allows me to direct all URLs to the signup page. By specifying the `/signup` URL and allowing `GET` and `POST` HTTP methods, Flask can handle requests for this URL and render the appropriate HTML template.
+To render the appropriate HTML template when a user accesses the `/signup` URL, I can use the `render_template()` function provided by Flask. This function takes the name of the template file as its first argument and any additional keyword arguments representing variables to be passed to the template. Here is an example code snippet:
+```.html
+return render_template('signup.html', title='Sign up')
+```
+The title being passed in the `render_template()` function is "Sign up". The title argument is used to pass the title of the page to be displayed in the browser's title bar.
+To display the value of the `title` variable in the HTML signup file, I use template tags provided by the Jinja templating engine used by Flask. The most common template tag is `{{ }}`, which allows me to output the value of a variable. Here's an example of how I use template tags in my HTML files:
+```.html
+{% if title %}
+<title>Foodie - {{ title }}</title>
+{% else %}
+<title>Foodie</title>
+{% endif %}
+```
+In this code, I use the `<title>` element for choosing a title to show in the browser's title bar. I use `{% %}`, Jinja template tag to use `if-else` statements. In the given example, `if` statement makes sure to add ' - ' after 'Foodie' if the `title` argument is given.
+```.py
+db = database_worker("social_net.db")
+register = f"INSERT into users(name, surname, username, country, email, " \
+                           f"password) values('{name}', '{surname}', '{username}', '{country}', " \
+                           f"'{email}', '{encrypt_password(password)}')"
+                db.run_save(query=register)
+                flash('Registration completed. Please log in.', 'success')
+```
+So, to add user registration data to my SQLite database in Flask, I use the `database_worker` class, which returns a `Database` object that I can use to interact with the database. I create an SQL query using the user input and insert it into the `users` table using the `run_save` method of the `Database` object. This saves the data (in this situation, registration details) to the database for future use.
+
+Additionally, I use the `flash` function to display a message to the user after successful registration. The first argument to the `flash` function is the message to be displayed, and the second argument specifies the type of the message. In this case, I use the success type to indicate that the registration was successful. This function helps me to provide feedback to the user about the outcome of their actions, which improves the user experience.
+
+### Success criteria 2: 
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
@@ -283,3 +320,5 @@ One interesting thing to note is the use of the name attribute in each input fie
 [25]: Python Software Foundation. "Objects, Values, and Types." Python 3.9.7 documentation, 2021, https://docs.python.org/3/reference/datamodel.html#objects-values-and-types. Accessed 7 Mar. 2023.
 
 [26]: Python Software Foundation. “9. Classes.” Python 3.10.0 documentation, Python Software Foundation, 2021, https://docs.python.org/3/tutorial/classes.html. Accessed 7 Mar. 2023.
+
+[27]: Jinja — Jinja Documentation (3.1.x). jinja.palletsprojects.com/en/3.1.x. Accesssed 4 April 2023.
