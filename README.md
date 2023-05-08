@@ -292,7 +292,23 @@ The function then checks whether `searchTerm` is a substring of `ingredientName`
 query = f"SELECT title, user_id, DATE(timestamp), content, ingredients, id, user_id from recipes where id={post_id}"
 ```
 This SQL query is used to retrieve the post information of a specific post with `post_id` from the recipes table. The `DATE()` function in SQL is used to extract the date part of a datetime expression, such as a timestamp. It returns the date in the format `YYYY-MM-DD`.
- 
+
+However, the problem with this query is that I needed the author's name instead of their `user_id`. To solve this problem, I created an additional SQL query to fetch the username from the `users` table, using the `user_id` retrieved from the original query.
+
+```.py
+user_id = post[0][1]
+query_user = f"SELECT username from users where id={user_id}"
+username = db.search(query=query_user)
+post = list(post[0])
+post[1] = username[0][0]
+post[6] = user_id
+post = tuple(post)
+```
+So, in this  code I first extracted the `user_id` from the post information using `post[0][1]`, which was returned from the initial query to the database. Then, I used string formatting to create another query, `query_user`, which retrieves the username associated with the user_id from the users table.
+
+Next, I executed the query using the `db.search()` method, which returned a list of tuples containing the username. Since I only needed the first item in the first tuple, I used `username[0][0]` to extract the actual username.
+
+Finally, I updated the `post` variable with the new username and the original user_id. I converted the post list to a tuple for consistency with the original query.
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
