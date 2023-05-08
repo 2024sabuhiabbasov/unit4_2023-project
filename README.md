@@ -218,7 +218,7 @@ Here you can see I try to get the values typed in the registration form. As it i
 ```.html
 <input type="text" id="name" placeholder="Enter name" name="name">
 ```
-One interesting thing to note is the use of the name attribute in each input field in my HTML code. This attribute is essential for identifying the form data when it is submitted to the server as we need it to call the value from the dictionary variable.
+One interesting thing to note is the use of the `name` attribute in each input field in my HTML code. This attribute is essential for identifying the form data when it is submitted to the server as we need it to call the value from the dictionary variable.
 ```.py
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
