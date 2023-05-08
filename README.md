@@ -70,7 +70,7 @@ There're different tools for the user-interface for web-applications: React, Ang
     - Feedback
     - Rate out of 10
 4. *[issue tackled: “following favorite users in the network”]* The platform provides a follow feature, enabling the network users to follow their favorite users.
-5. *[issue tackled: “difficulties keeping notes of recipes or restaurant names on paper”]* The platform includes a feature that allows users to create and save lists of their favorite restaurants and dishes.
+5. *[issue tackled: “difficulties keeping notes of recipes or restaurant names on paper”]* The platform includes a feature that allows users to save lists of their favorite dishes.
 6. _[issue tackled: “seeing only their sharings”]_ The platform allows users to see their favorite users’ posts separated from everyone’s.
 
 
