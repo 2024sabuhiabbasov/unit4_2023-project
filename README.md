@@ -92,7 +92,7 @@ _Figure 1:_ The system diagram for the application is illustrated in Figure 1. D
 ### Flow Diagram 2 - Login Feature
 ![login.jpeg](assets%2Flogin.jpeg)
 <p align="center">
-  <i>Figure 4</i> - The flow diagram for the login feature is depicted in Figure 4. It shows how the login feature is going to work.
+  <i>Figure 4</i> - The flow diagram for the login feature is depicted in Figure 4. It shows how the login feature is going to work if the fields are left blank, passwords do not match, or the user doesn't exist in the database.
 </p>
 
 ### Flow Diagram 3 - New Review Feature
@@ -130,6 +130,13 @@ _Figure 1:_ The system diagram for the application is illustrated in Figure 1. D
 </p>
 
 ## Test plan
+
+|	Description	|	Type	|	Input	|	Output
+|	-	|	-	|	-	|	-
+|	Test for Registration System	|	Unit Test	|	1.Open Website 2.Click on the Sign up button 3. Enter "John" for the name, "Doe" for surname. Select "Azerbaijan" for the country. Enter "johndoe123" for the username. Enter "johndoe@johndoe.com" for the email address. Enter "johndoelovestocook" for the password and confirm password. 4. Click the submit button on the page.	|	After clicking the submit button, it should redirect to the login page with a message on the screen saying, "Registration completed. Please log in."
+|	Test for Error Scenario for Registration System	|	Unit Test	|	1.Open Website 2.Click on the Sign up button 3. Enter "John" for the name, "Doe" for surname. Select "Azerbaijan" for the country. Enter "johndoe123" for the username. Enter "johndoe@johndoe.com" for the email address. Enter "johndoelovestocook" for the password and confirm password with a different password. 4. Click the submit button on the page.	|	After clicking the submit button, the page should refresh, with an error message appearing at the top of the screen detailing the error saying: "Passwords do not match."
+
+
 ## Record of Tasks
 
 # Criteria C: Development
