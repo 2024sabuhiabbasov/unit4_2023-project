@@ -308,7 +308,16 @@ So, in this  code I first extracted the `user_id` from the post information usin
 
 Next, I executed the query using the `db.search()` method, which returned a list of tuples containing the username. Since I only needed the first item in the first tuple, I used `username[0][0]` to extract the actual username.
 
-Finally, I updated the `post` variable with the new username and the original user_id. I converted the post list to a tuple for consistency with the original query.
+Finally, I updated the `post` variable with the new username and the original user_id. I converted the post list to a tuple for consistency with the original query. 
+
+```.html
+<p>User: <a href="{{ url_for('profile', user_id=post[6]) }}">{{ post[1] }}</a></p>
+```
+So in this part of the code, I am creating a `hyperlink` that displays the author's name and links to their profile page. I am using the `post[6]` value to dynamically create the hyperlink to the author's profile by passing their user ID as a parameter to the Flask `url_for()` function.
+
+To display the author's name, I am using the `post[1]` value which I previously extracted and updated to display the actual username instead of the user ID. By placing the hyperlink within a `<p>` element, I am able to display the author's name and provide a clickable link to their profile page.
+
+`url_for` is a function in Flask that generates a URL to a given function or endpoint in the application. It takes the name of the endpoint as its first argument and any additional keyword arguments that correspond to variables used in the endpoint's URL rule. This function is used in Flask applications to create links between different pages, like I do go from the recipe page to the profile page.
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
