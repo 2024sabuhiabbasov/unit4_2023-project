@@ -4,13 +4,13 @@
     <h1>New recipe</h1>
         <form action="{{ url_for('new_recipe') }}" method="POST">
             <label for="recipe-name">Recipe Name:</label>
-            <input type="text" id="recipe-name" name="recipe_name" /><br/>
+            <input type="text" id="recipe-name" name="recipe_name" required><br/>
 
             <label for="recipe-instructions">Instructions:</label>
-            <textarea id="recipe-instructions" name="recipe_instructions" rows="4" cols="50"></textarea><br />
+            <textarea id="recipe-instructions" name="recipe_instructions" rows="4" cols="50" required></textarea><br />
 
             <label for="recipe-ingredients">Ingredients:</label>
-            <input type="text" id="ingredient-search" name="ingredient_search" onkeyup="searchIngredients()"><br>
+            <input type="text" id="ingredient-search" name="ingredient_search" onkeyup="searchIngredients()" required><br>
 
             <div id="ingredient-list">
               {% for ingredient in ingredients_list %}
