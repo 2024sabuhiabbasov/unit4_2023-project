@@ -63,7 +63,7 @@ There're different tools for the user-interface for web-applications: React, Ang
 2. *[issue tackled: “to share culinary creations”]* Users can CRUD operations for recipe posts with each other through the platform's sharing functionality with following values:
     - Name
     - Ingredients
-    - Preparation
+    - Instructions
 3. *[issue tackled: “to share culinary creations, restaurant reviews”]* The platform offers CRUD operations for restaurant reviews, allowing users to leave reviews and ratings for restaurants with following values:
     - Name
     - Location
@@ -254,7 +254,17 @@ So, to add user registration data to my SQLite database in Flask, I use the `dat
 
 Additionally, I use the `flash` function to display a message to the user after successful registration. The first argument to the `flash` function is the message to be displayed, and the second argument specifies the type of the message. In this case, I use the success type to indicate that the registration was successful. This function helps me to provide feedback to the user about the outcome of their actions, which improves the user experience.
 
-### Success criteria 2: 
+### Success criteria 2: Users can CRUD operations for recipe posts with each other through the platform's sharing functionality with following values: Name, Ingredients, Instructions
+```.html
+<label for="recipe-ingredients">Ingredients:</label>
+<input type="text" id="ingredient-search" name="ingredient_search" onkeyup="searchIngredients()" required>
+```
+
+This code creates a label and an input field for the user to search for ingredients. The `for` attribute of the label specifies the ID of the element it labels, which in this case is the input field. This helps users with accessibility needs as they can click on the label to activate the input field.
+
+The `type` attribute of the input field is set to  `text`, which means that the user can enter text into it. The `id` attribute specifies the unique identifier for the input field, and the `name` attribute specifies the name of the field as it will appear in the form data when the user submits the form.
+
+I was challenged to create a text field with dynamic search. After doing some research[28] I learned how to do it. So the `onkeyup` attribute is an event handler that fires a function called `searchIngredients()` whenever the user types a key into the input field. This allows for dynamic searching as the user types, without having to submit the form each time
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
@@ -322,3 +332,5 @@ Additionally, I use the `flash` function to display a message to the user after 
 [26]: Python Software Foundation. “9. Classes.” Python 3.10.0 documentation, Python Software Foundation, 2021, https://docs.python.org/3/tutorial/classes.html. Accessed 7 Mar. 2023.
 
 [27]: Jinja — Jinja Documentation (3.1.x). jinja.palletsprojects.com/en/3.1.x. Accesssed 4 April 2023.
+
+[28]: “Dynamic Search.” CodePen, codepen.io/coltonf93/pen/DbagWg. Accessed 18 April 2023.
