@@ -370,6 +370,11 @@ To make it easier for users to provide restaurant addresses when they leave revi
 ```
 First, I needed to create my own Google Maps API key to use in my application. This involved going to the Google Cloud Console and setting up a project, then generating a unique API key. In the code above, the `script` tag includes the Google Maps API library with my API key. The `input` variable retrieves the `textarea` element by its `id`. The `google.maps.places.Autocomplete` function creates an instance of the autocomplete service with the `input` element as its input field.
 
+https://user-images.githubusercontent.com/111758436/236998418-7364da14-9fa9-450c-9c17-1f61093884f8.mp4
+<p align="center">
+  <i>Figure 12:</i> "Video showcasing how users can now easily select a suggested address as they type.
+</p>
+
 
 
 # Criteria D: Functionality
