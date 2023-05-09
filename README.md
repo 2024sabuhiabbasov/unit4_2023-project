@@ -410,7 +410,7 @@ In the code snippet above, the `DELETE` keyword indicates that we want to delete
 
 As the client asked me to add "Are you sure you want to delete your post?" confirmation message (see the <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project/blob/master/README.md#evidence-of-consultation">Evidence of Consultation</a> in Appendix), I added a JavaScript `confirm()` function to the delete button. This function displays a dialog box with a specified message, along with an OK and a Cancel button. If the user clicks the OK button, the function returns `true`. Otherwise, it returns `false`. So, I used the `confirm()` function to ask the user if they are sure they want to delete their post. If the user clicks OK, the `delete_post` function is executed. Otherwise, nothing happens.
 ```html
-<a href="{{ url_for('delete_review', id=review[4]) }}" onclick="return confirm('Are you sure you want to delete your post?');"><button class="delete-post-btn">Delete</button></a>
+<a href="{{ url_for('delete_review', id=review[4]) }}" onclick="return confirm('Are you sure you want to delete this post?');"><button class="delete-post-btn">Delete</button></a>
 ```
 The snippet of code above shows how I used the `confirm()` function in my application. The `onclick` attribute is used to execute the `confirm()` function when the user clicks the delete button. The `return` statement is used to return the value of the `confirm()` function. If the user clicks OK, the `delete_post` function is executed. Otherwise, nothing happens.
 
