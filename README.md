@@ -426,7 +426,8 @@ My success criteria required me to display followed users' posts seperated from 
 followed = db.search(query=query_followed)
 followed = [i[0] for i in followed]
 ```
-I then converted this list of user IDs to a tuple, which I could use in an SQL `IN` clause to filter posts by user ID:
+This line of code uses a list comprehension to extract the first (and only) item from each tuple in the `followed` list. The resulting list contains only the IDs of the users being followed by the current user. For example, if the `followed` list was [(1,), (2,), (3,)], the list comprehension would return us [1, 2, 3]. 
+I then converted this list of user IDs to a tuple, which I could use in an SQL `IN` clause to filter posts by user ID. The reason why I converted them to tuple is in order to use the `IN` clause, I needed to pass a tuple of user IDs as a single parameter to the SQL query. Tuples are often used in Python for this purpose because they are immutable and can be passed as a single argument[31]:
 ```.py
 followed = tuple(followed)
 ```
