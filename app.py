@@ -144,8 +144,9 @@ def index():
                         username = db.search(query=query_username)
                         reviews[i] = list(reviews[i])
                         reviews[i][j] = username[0][0]
-        return render_template('index.html', title='Home', login=True, user_id=user_id_title, user=user,
-                               posts=posts, reviews=reviews)
+            print(posts)
+
+        return render_template('index.html', title='Home', login=True, user_id=user_id_title, user=user, posts=posts, reviews=reviews)
     return render_template('index.html', title='Home', login=True, user_id=user_id_title, user=user)
 
 
@@ -180,6 +181,7 @@ def explore():
                     username = db.search(query=query_username)
                     reviews[i] = list(reviews[i])
                     reviews[i][j] = username[0][0]
+        print(posts)
         return render_template('explore.html', title='Explore', user=user, posts=posts,
                                login=True, admin=user_id_title, reviews=reviews)
     return render_template('explore.html', title='follExplore', login=True,
@@ -647,7 +649,7 @@ def new_recipe():
             db.run_save(query=query_new_recipe)
             flash('Recipe added.', 'success')
             print("Recipe added.")
-            return redirect(url_for('index'))
+            return redirect(url_for('explore'))
         return render_template('index.html', messages=get_flashed_messages(), user=user, user_id=user_id, login=True)
     return render_template('new-recipe.html', title='New Recipe',
                            ingredients_list=ingredients_list, login=True, messages=get_flashed_messages(),
@@ -671,7 +673,7 @@ def new_review():
         db.run_save(query=query_new_review)
         flash('Review added.', 'success')
         print("Review added.")
-        return redirect(url_for('index'))
+        return redirect(url_for('explore'))
     return render_template('new_review.html', title='New Restaurant Review',
                            login=True, messages=get_flashed_messages(),
                            user_id=user_id)
