@@ -6,7 +6,6 @@
 </p>
 
 <!-- TOC -->
-
 * [Foodie: A Social Network for Food Lovers](#foodie-a-social-network-for-food-lovers)
 * [Criteria A: Planning](#criteria-a-planning)
   * [Problem Definition](#problem-definition)
@@ -29,13 +28,18 @@
   * [Existing tools](#existing-tools)
   * [List of techniques used](#list-of-techniques-used)
   * [Development](#development)
+    * [Success criteria 1: The platform provides a user registration feature, allowing users to create a personal account.](#success-criteria-1-the-platform-provides-a-user-registration-feature-allowing-users-to-create-a-personal-account)
+    * [Success criteria 2: Users can CRUD operations for recipe posts with each other through the platform's sharing functionality with following values: Name, Ingredients, Instructions](#success-criteria-2-users-can-crud-operations-for-recipe-posts-with-each-other-through-the-platforms-sharing-functionality-with-following-values-name-ingredients-instructions)
+    * [Success criteria 4: The platform provides a follow feature, enabling the network users to follow their favorite users](#success-criteria-4-the-platform-provides-a-follow-feature-enabling-the-network-users-to-follow-their-favorite-users)
+    * [Success criteria 6: The platform allows users to see their favorite users’ posts separated from everyone’s](#success-criteria-6-the-platform-allows-users-to-see-their-favorite-users-posts-separated-from-everyones)
 * [Criteria D: Functionality](#criteria-d-functionality)
   * [A video demonstrating the proposed solution with narration](#a-video-demonstrating-the-proposed-solution-with-narration)
-* [Criteria](#criteria)
+* [Criteria E: Evaluation](#criteria-e-evaluation)
+  * [Evaluation by Client](#evaluation-by-client)
+  * [Evaluation by Peer](#evaluation-by-peer)
 * [Appendix](#appendix)
   * [Evidence of consultation](#evidence-of-consultation)
 * [Works cited](#works-cited)
-
 <!-- TOC -->
 
 # Criteria A: Planning
