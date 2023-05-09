@@ -372,7 +372,7 @@ First, I needed to create my own Google Maps API key to use in my application. T
 
 https://user-images.githubusercontent.com/111758436/236998418-7364da14-9fa9-450c-9c17-1f61093884f8.mp4
 <p align="center">
-  <i>Figure 12:</i> "Video showcasing how users can now easily select a suggested address as they type.
+  <i>Figure 12:</i> Video showcasing how users can now easily select a suggested address as they type.
 </p>
 
 
