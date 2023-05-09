@@ -4,7 +4,7 @@
     <h1>New review</h1>
         <form action="{{ url_for('new_review') }}" method="POST">
             <label for="restaurant_name">Name</label>
-            <input type="text" name="restaurant_name" id="restaurant_name" reqTuired>
+            <input type="text" name="restaurant_name" id="restaurant_name" required>
             <br>
             <label for="restaurant_address">Address</label>
             <textarea name="restaurant_address" id="restaurant_address" rows="4" cols="50" required></textarea>
