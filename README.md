@@ -528,7 +528,7 @@ With these two queries, I was able to fetch the posts of the followed users and 
 
 ## A video demonstrating the proposed solution with narration
 
-# Criteria A: Evaluation
+# Criteria E: Evaluation
 ## Evaluation by Client
 | Success Criteria   | Met? | Description          |
 |---------------------------------------------------------------|------|------------------------------------------------------------|
@@ -541,7 +541,8 @@ With these two queries, I was able to fetch the posts of the followed users and 
 
 The client expresses high satisfaction with the developed web application, expressing that it effectively addresses all the outlined success criteria (see Fig A. 4 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix). 
 
-# Criteria
+## Evaluation by Peer
+I had the opportunity to receive feedback from a peer who evaluated my Foodie project, and I am pleased to say that it met all the success criteria that were set out at the beginning of the project. They mentioned that they especially liked the feature that suggests addresses when adding a restaurant review. As evidence of the consultation, I have included a screenshot of the email in the appendix section of my documentation (see Fig A. 5 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix).
 
 # Appendix
 
@@ -566,6 +567,11 @@ The client expresses high satisfaction with the developed web application, expre
 ![final.png](assets%2Ffinal.png)
 <p align="justify">
   <i>Figure A. 4</i> Client's evaluation of the web application
+</p>
+
+![last.png](assets%2Flast.png)
+<p align="justify">
+  <i>Figure A. 5</i> Peer's evaluation of the web application
 </p>
 
 # Works cited
