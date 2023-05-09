@@ -350,6 +350,28 @@ query_update = f"UPDATE recipes SET title='{title}', content='{content}', ingred
 In my case, the UPDATE statement is combined with the SET keyword to specify which columns I wanted to update, and what their new values should be. In this code snippet, the columns I want to update are `title`, `content`, and `ingredients`.
 The WHERE clause is used to specify which row or rows to update. In my case, I used the `id` column to identify the row to update, using the `post_id` variable. 
 
+To allow the user to delete their post, I added a delete button next to their post and connected it to the `delete_post` function. The function gets the post_id and deletes the post from the `recipes` table using the query below:
+```.py
+query_delete = f"DELETE from recipes where id={post_id}"
+```
+In the code snippet above, the `DELETE` keyword indicates that we want to delete data from the table. In this case, we want to delete the row where the `id` column matches the post_id.
+
+### Success criteria 3: The platform offers CRUD operations for restaurant reviews, allowing users to leave reviews and ratings for restaurants with following values: Name, Location, Feedback, Rate out of 10
+
+To make it easier for users to provide restaurant addresses when they leave reviews, I decided to add a suggestion input field that would display Google Maps addresses as users type. I quickly found out that I needed to integrate a Google Maps API into my application, which was quite challenging[29]. After creating a Google Cloud account and obtaining an API key, I added the following code to my HTML file:
+```.html
+<label for="restaurant_address">Address</label>
+<textarea name="restaurant_address" id="restaurant_address" required></textarea>
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places"></script>
+<script>
+    var input = document.getElementById('restaurant_address');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+</script>
+```
+First, I needed to create my own Google Maps API key to use in my application. This involved going to the Google Cloud Console and setting up a project, then generating a unique API key. In the code above, the `script` tag includes the Google Maps API library with my API key. The `input` variable retrieves the `textarea` element by its `id`. The `google.maps.places.Autocomplete` function creates an instance of the autocomplete service with the `input` element as its input field.
+
+
+
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
 
@@ -415,6 +437,8 @@ The WHERE clause is used to specify which row or rows to update. In my case, I u
 
 [26]: Python Software Foundation. “9. Classes.” Python 3.10.0 documentation, Python Software Foundation, 2021, https://docs.python.org/3/tutorial/classes.html. Accessed 7 Mar. 2023.
 
-[27]: Jinja — Jinja Documentation (3.1.x). jinja.palletsprojects.com/en/3.1.x. Accesssed 4 April 2023.
+[27]: Jinja — Jinja Documentation (3.1.x). https://jinja.palletsprojects.com/en/3.1.x. Accesssed 4 April 2023.
 
-[28]: “Dynamic Search.” CodePen, codepen.io/coltonf93/pen/DbagWg. Accessed 18 April 2023.
+[28]: “Dynamic Search.” CodePen, https://codepen.io/coltonf93/pen/DbagWg. Accessed 18 April 2023.
+
+[29]: “Place Autocomplete Address Form  |  Maps JavaScript API  |  Google Developers.” Google Developers, https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform. Accessed 20 April 2023.
