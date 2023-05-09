@@ -375,7 +375,11 @@ https://user-images.githubusercontent.com/111758436/236998418-7364da14-9fa9-450c
   <i>Figure 12:</i> Video showcasing how users can now easily select a suggested address as they type.
 </p>
 
-
+As my success criteria requires, the users should be able to rate the restaurant they are sharing about between 1 and 10. To implement this to my web-application, I used the snippet of code below:
+```.html
+<input type="number" name="rating" id="rating" min="1" max="10" required>
+```
+In the HTML code snippet above, I added an input field of type `number` to the form. The `min` and `max` attributes specify the minimum and maximum values for the rating that a user can enter. In this case, as you can see (`min="1" max="10"`), the minimum rating is 1 and the maximum rating is 10.
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
