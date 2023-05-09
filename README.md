@@ -185,45 +185,46 @@ Code Review	|	Reviewing Code	|	Review the entire codebase, identifying and remov
 ## Record of Tasks
 |	Task No	|	Planned Action	|	Planned Outcome	|	Time estimate	|	Target completion date	|	Criterion
 |	-	|	-	|	-	|	-	|	-	|	-
-|	1	|	Write a problem definition	|	Clear idea on how to solve the problem and choose the best tools for the project	|	20 mins.	|	April 4	|	A
-|	2	|	Write a design statement	|	Better visual understanding of what is going to be in the application for the user.	|	20 mins.	|	April 4	|	A
-|	3	|	Write rationale for the proposed solution	|	To make it easier for the developer to get started the project.	|	20 mins.	|	April 4	|	A
-|	4	|	Write successs criteria	|	To make it easier for the developer to get started the project.	|	20 mins.	|	April 4	|	A
-|	5	|	Draw a system diagram	|	A system diagram providing a clear visual representation of the components and their interactions in the Foodie Network	|	1 hour	|	April 7	|	B
-|	6	|	Draw an ER diagram	|	A clear and organized visual representation of the data structure for the Foodie network	|	1 hour	|	April 7	|	B
-|	7	|	Draw a wireframe diagram	|	A visual representation that accurately represents the layout and structure of the desired design of the website	|	1 hour	|	April 10	|	B
-|	8	|	Draw a UML diagram	|	A diagram showing how the product is developed with methods and attributes to the solution	|	1 hour	|	April 11	|	B
-|	9	|	Draw a flow diagram and write an explanation	|	A flowchart for follow function	|	15 mins.	|	April 12	|	B
-|	10	|	Draw a flow diagram and write an explanation	|	A flowchart for login feature	|	15 mins.	|	April 13	|	B
-|	11	|	Draw a flow diagram and write an explanation	|	A flowchart for new restaurant review feature	|	15 mins.	|	April 14	|	B
-|	12	|	Create a test plan	|	An outline of test plan with the values description, type, input, and output	|	30 mins.	|	April 15	|	B
-|	13	|	Follow up meeting with client	|	Present success criterias and development plan to client and get the approval	|	20 minutes	|	April 15	|	A
-|	14	|	Code registration system/page	|	A page with registration feature allowing the user to sign up	|	30 mins.	|	April 16	|	C
-|	15	|	Code login system/page	|	A page with login feature allowing the user to login	|	30 mins.	|	April 16	|	C
-|	16	|	Code new recipe feature/page	|	A new recipe page allowing the user to enter `Name`, `Instructions`, and `Ingredients` and post it on the network	|	1 hour	|	April 17	|	C
-|	17	|	Code recipe page	|	A recipe page showing `Name`, `Author`, `Instructions`, and `Ingredients` and having the link to the user's profile and a save button	|	20 mins.	|	April 17	|	C
-|	18	|	Code home page	|	A homepage with a navigation bar containing `Home`, `Explore`, `Favorites`, `Profile`, `New recipe/restaurant review`  and `Log out` buttons and showing posts by followed users	|	20 mins.	|	April 18	|	C
-|	19	|	Code explore page	|	A page that contains the homepage navigationbar but showing everyone's posts on the network	|	20 mins.	|	April 18	|	C
-|	20	|	Code profile page	|	A page showing user's information and having a follow/unfollow button	|	30 mins.	|	April 19	|	C
-|	21	|	Code follow feature	|	A function allowing the follow button to complete the follow the user task by the logged in user	|	30 mins.	|	April 19	|	C
-|	22	|	Code unfollow feature	|	A function allowing the unfollow button to complete the unfollow the user task by the logged in user	|	30 mins.	|	April 19	|	C
-|	23	|	Code new restraurant review feature/page	|	A new restaurant review page allowing the user to enter `Name`, `Address`, `Feedback`, and `Rating` and post it on the network, also having the link to the user's profile	|	1 hour	|	April 20	|	C
-|	24	|	Restraurant review page	|	A restaurant review page showing `Name`, `Author`, `Address`, `Feedback`, and `Rating`	|	1 hour	|	April 20	|	C
-|	25	|	Code edit recipe feature/page	|	An edit recipe page allowing the user to edit a previously shared recipe	|	30 mins.	|	April 21	|	C
-|	26	|	Code delete recipe feature	|	An delete recipe feature allowing the user to delete a previously shared recipe	|	30 mins.	|	April 22	|	C
-|	27	|	Code edit restaurant review feature/page	|	An edit restaurant review page allowing the user to edit a previously restaurant review	|	30 mins.	|	April 22	|	C
-|	28	|	Code delete restaurant review feature	|	An delete restaurant review feature allowing the user to delete a previously shared restaurant review	|	30 mins.	|	April 23	|	C
-|	29	|	Third meeting with client	|	Showing the application to the client and to ask for their opinion on the applications current progress	|	15 minutes	|	April 23	|	A
-|	30	|	Code save feature	|	A function allowing the save button to complete the save the post task by the logged in user	|	30 mins.	|	April 24	|	C
-|	31	|	Code unsave feature	|	A function allowing the unsave button to complete the unsave the post task by the logged in user	|	30 mins.	|	April 24	|	C
-|	32	|	Code saves feature/page	|	A page with the saved posts by the active user on the network	|	30 mins.	|	April 25	|	C
-|	33	|	Code log out feature	|	A feature allowing the log out button log the user out and returning to login page	|	15 mins.	|	April 26	|	C
-|	34	|	Cleaning up the Code	|	Going back and reviewing the code to correctly format and remove unused code 	|	1 hour	|	April 30	|	C
-|	35	|	Create existing tools list	|	A list of tools used during the development of the app	|	15 mins.	|	April 30	|	C
-|	36	|	Create list of techniques used table	|	Software/Development tools, Coding Scrturcture Tools, and Libraries used during the development of the app	|	15 mins.	|	April 31	|	C
-|	37	|	Add developement of solution to Criteria C	|	Codes, techniques, etc. used to develop the solution in Criteria C	|	3 hours.	|	May 1	|	C
-|	38	|	Record and upload a video of max. 4 min. length, presenting the application.	|	A video, showing how the application functions. Last 30 seconds should be focused on well-organization of code.	|	10 mins.	|	May 7	|	D
-|	39	|	Finish Criteria E	|	Criteria E with evaluation by client and peer	|	20 mins.	|	May 8	|	E
+|	1	|	Planning: Write a problem definition	|	Clear idea on how to solve the problem and choose the best tools for the project	|	20 mins.	|	April 4	|	A
+|	2	|	Planning: Write a design statement	|	Better visual understanding of what is going to be in the application for the user.	|	20 mins.	|	April 4	|	A
+|	3	|	Planning: Write rationale for the proposed solution	|	To make it easier for the developer to get started the project.	|	20 mins.	|	April 4	|	A
+|	4	|	Planning: Write successs criteria	|	To make it easier for the developer to get started the project.	|	20 mins.	|	April 4	|	A
+|	5	|	Design: Draw a system diagram	|	A system diagram providing a clear visual representation of the components and their interactions in the Foodie Network	|	1 hour	|	April 7	|	B
+|	6	|	Design: Draw an ER diagram	|	A clear and organized visual representation of the data structure for the Foodie network	|	1 hour	|	April 7	|	B
+|	7	|	Design: Draw a wireframe diagram	|	A visual representation that accurately represents the layout and structure of the desired design of the website	|	1 hour	|	April 10	|	B
+|	8	|	Design: Draw a UML diagram	|	A diagram showing how the product is developed with methods and attributes to the solution	|	1 hour	|	April 11	|	B
+|	9	|	Design: Draw a flow diagram and write an explanation	|	A flowchart for follow function	|	15 mins.	|	April 12	|	B
+|	10	|	Design: Draw a flow diagram and write an explanation	|	A flowchart for login feature	|	15 mins.	|	April 13	|	B
+|	11	|	Design: Draw a flow diagram and write an explanation	|	A flowchart for new restaurant review feature	|	15 mins.	|	April 14	|	B
+|	12	|	Design: Create a test plan	|	An outline of test plan with the values description, type, input, and output	|	30 mins.	|	April 15	|	B
+|	13	|	Planning: Follow up meeting with client	|	Present success criterias and development plan to client and get the approval	|	20 minutes	|	April 15	|	A
+|	14	|	Development: Code registration system/page	|	A page with registration feature allowing the user to sign up	|	30 mins.	|	April 16	|	C
+|	15	|	Development: Code login system/page	|	A page with login feature allowing the user to login	|	30 mins.	|	April 16	|	C
+|	16	|	Development: Code new recipe feature/page	|	A new recipe page allowing the user to enter `Name`, `Instructions`, and `Ingredients` and post it on the network	|	1 hour	|	April 17	|	C
+|	17	|	Development: Code recipe page	|	A recipe page showing `Name`, `Author`, `Instructions`, and `Ingredients` and having the link to the user's profile and a save button	|	20 mins.	|	April 17	|	C
+|	18	|	Development: Code home page	|	A homepage with a navigation bar containing `Home`, `Explore`, `Favorites`, `Profile`, `New recipe/restaurant review`  and `Log out` buttons and showing posts by followed users	|	20 mins.	|	April 18	|	C
+|	19	|	Development: Code explore page	|	A page that contains the homepage navigationbar but showing everyone's posts on the network	|	20 mins.	|	April 18	|	C
+|	20	|	Development: Code profile page	|	A page showing user's information and having a follow/unfollow button	|	30 mins.	|	April 19	|	C
+|	21	|	Development: Code follow feature	|	A function allowing the follow button to complete the follow the user task by the logged in user	|	30 mins.	|	April 19	|	C
+|	22	|	Development: Code unfollow feature	|	A function allowing the unfollow button to complete the unfollow the user task by the logged in user	|	30 mins.	|	April 19	|	C
+|	23	|	Development: Code new restraurant review feature/page	|	A new restaurant review page allowing the user to enter `Name`, `Address`, `Feedback`, and `Rating` and post it on the network, also having the link to the user's profile	|	1 hour	|	April 20	|	C
+|	24	|	Development: Restraurant review page	|	A restaurant review page showing `Name`, `Author`, `Address`, `Feedback`, and `Rating`	|	1 hour	|	April 20	|	C
+|	25	|	Development: Code edit recipe feature/page	|	An edit recipe page allowing the user to edit a previously shared recipe	|	30 mins.	|	April 21	|	C
+|	26	|	Development: Code delete recipe feature	|	An delete recipe feature allowing the user to delete a previously shared recipe	|	30 mins.	|	April 22	|	C
+|	27	|	Development: Code edit restaurant review feature/page	|	An edit restaurant review page allowing the user to edit a previously restaurant review	|	30 mins.	|	April 22	|	C
+|	28	|	Development: Code delete restaurant review feature	|	An delete restaurant review feature allowing the user to delete a previously shared restaurant review	|	30 mins.	|	April 23	|	C
+|	29	|	Planning: Third meeting with client	|	Showing the application to the client and to ask for their opinion on the applications current progress	|	15 minutes	|	April 23	|	A
+|	30	|	Development: Code save feature	|	A function allowing the save button to complete the save the post task by the logged in user	|	30 mins.	|	April 24	|	C
+|	31	|	Development: Code unsave feature	|	A function allowing the unsave button to complete the unsave the post task by the logged in user	|	30 mins.	|	April 24	|	C
+|	32	|	Development: Code saves feature/page	|	A page with the saved posts by the active user on the network	|	30 mins.	|	April 25	|	C
+|	33	|	Development: Code log out feature	|	A feature allowing the log out button log the user out and returning to login page	|	15 mins.	|	April 26	|	C
+|	34	|	Development: Cleaning up the Code	|	Going back and reviewing the code to correctly format and remove unused code 	|	1 hour	|	April 30	|	C
+|	35	|	Development: Create existing tools list	|	A list of tools used during the development of the app	|	15 mins.	|	April 30	|	C
+|	36	|	Development: Create list of techniques used table	|	Software/Development tools, Coding Scrturcture Tools, and Libraries used during the development of the app	|	15 mins.	|	April 31	|	C
+|	37	|	Development: Add developement of solution to Criteria C	|	Codes, techniques, etc. used to develop the solution in Criteria C	|	3 hours.	|	May 1	|	C
+|	38	|	Functionality: Record and upload a video of max. 4 min. length, presenting the application.	|	A video, showing how the application functions. Last 30 seconds should be focused on well-organization of code.	|	10 mins.	|	May 7	|	D
+|	39	|	Implementation: Get Client Evaluation on the Web Application	|	In Criteria E, subsequent evidence for the client evaluation	|	30 mins.	|	May 8	|	E
+|	40	|	Implementation: Get Peer Evaluation on the Web Application	|	In Criteria E, subsequent evidence for a peer evaluation	|	30 mins.	|	May 8	|	E
 
 # Criteria C: Development
 
