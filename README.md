@@ -329,7 +329,7 @@ To display the author's name, I am using the `post[1]` value which I previously 
 ```
 So, I needed to display the list of ingredients associated with a recipe on the post page. To do this, I first added an HTML `<p>` tag with the text "Ingredients:". Next, I added an HTML `<ul>` tag to create an unordered list. Within this tag, I used a for loop in Jinja to iterate over each ingredient in the list of ingredients associated with the recipe (stored in `post[4]`). For each ingredient, I used an HTML `<li>` tag to display the ingredient text.
 
-<img src="https://user-images.githubusercontent.com/111758436/236991397-09d3a86f-fad0-4049-b6b4-a3ece3cd664b.png">
+<img src="https://user-images.githubusercontent.com/111758436/236991397-09d3a86f-fad0-4049-b6b4-a3ece3cd664b.png" width="100%">
 <p align="center">
   <i>Fig. 11</i>: Example ingredients list as shown in a post.
 </p>
@@ -380,6 +380,45 @@ As my success criteria requires, the users should be able to rate the restaurant
 <input type="number" name="rating" id="rating" min="1" max="10" required>
 ```
 In the HTML code snippet above, I added an input field of type `number` to the form. The `min` and `max` attributes specify the minimum and maximum values for the rating that a user can enter. In this case, as you can see (`min="1" max="10"`), the minimum rating is 1 and the maximum rating is 10.
+
+### Success criteria 4: The platform provides a follow feature, enabling the network users to follow their favorite users
+When I started working on this success criteria, I added a follow button on all users' profile pages. However, I soon realized that I needed to handle the case where a user had already followed someone and wanted to follow them again. To solve this issue, I decided to check if a user had already followed another user every time their profile page was redirected.
+To implement this functionality, I used the code snippet below in my HTML file:
+```.html
+{% if follow %}
+    <form action="{{ url_for('unfollow', user_id=user[0]) }}" method="post">
+        <input type="submit" value="Unfollow">
+    </form>
+{% else %}
+    <form action="{{ url_for('follow', user_id=user[0]) }}" method="post">
+        <input type="submit" value="Follow">
+    </form>
+{% endif %}
+```
+This code checks the `follow` variable and shows either a Follow or Unfollow button on the user's profile page.
+
+To check if a user has already followed another user, I used the following code in my Python file:
+```.py
+query_follow = f"SELECT * from follow where follower={user_id_title} and followed={post[6]}"
+follow = db.search(query=query_follow)
+if follow:
+    follow = True
+else:
+    follow = False
+```
+This code checks if the user has already followed another user by executing a SQL query on the `follow` table in my database. If a record is found in the `follow` table, then the user has already followed the other user, and the `follow` variable is set to `True`.
+
+To allow users to follow each other, I used the following code in my Python file:
+```.py
+query_follow = f"INSERT INTO follow (follower, followed) VALUES ({follower}, {user_id})"
+```
+The  `query_follow` query inserts a new row into the `follow` table, which creates a follow relationship between the user with the `follower` ID and the user with the `followed` ID. This relationship is established when the follower clicks the "Follow" button on the followed user's profile page.
+
+To allow users to unfollow each other, I used the following code in my Python file:
+```.py
+query_unfollow = f"DELETE FROM follow WHERE follower={follower} and followed={user_id}"
+```
+When the `query_unfollow` query is run it deletes the row in the `follow` table where the follower ID matches the current user and the followed ID matches the user being unfollowed. This removes the follow relationship between the two users.
 
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
