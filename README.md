@@ -554,23 +554,23 @@ I had the opportunity to receive feedback from a peer who evaluated my Foodie pr
 </p>
 
 ![2nd](https://github.com/2024sabuhiabbasov/unit4_2023-project/assets/111758436/442b9d9b-75bc-453d-8c27-a5fc37570630)
-<p align="justify">
+<p align="center">
   <i>Figure A. 2</i> Client's approval of all success criteria and development plan after meeting.
 </p>
 
 ![3rd](https://github.com/2024sabuhiabbasov/unit4_2023-project/assets/111758436/bbfee48c-cdcc-45ec-bb12-0383b1da055f)
-<p align="justify">
+<p align="center">
 <i>Figure A. 3</i> Client's approval of all the current state of the web applications development after meeting.
 
 </p>
 
 ![final.png](assets%2Ffinal.png)
-<p align="justify">
+<p align="center">
   <i>Figure A. 4</i> Client's evaluation of the web application
 </p>
 
 ![last.png](assets%2Flast.png)
-<p align="justify">
+<p align="center">
   <i>Figure A. 5</i> Peer's evaluation of the web application
 </p>
 
