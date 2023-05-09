@@ -528,6 +528,19 @@ With these two queries, I was able to fetch the posts of the followed users and 
 
 ## A video demonstrating the proposed solution with narration
 
+# Criteria A: Evaluation
+## Evaluation by Client
+| Success Criteria   | Met? | Description          |
+|---------------------------------------------------------------|------|------------------------------------------------------------|
+| The platform provides a user registration feature, allowing users to create a personal account. | Yes  |  User registration feature to create personal account.  |
+| Users can CRUD operations for recipe posts with each other through the platform's sharing functionality with following values: Name, Ingredients, Instructions. | Yes  | The platform allows users to perform CRUD operations for recipe posts, including creating, reading, updating, and deleting posts, with the following fields: name, ingredients, and instructions.|
+| The platform offers CRUD operations for restaurant reviews, allowing users to leave reviews and ratings for restaurants with following values: Name, Location, Feedback, Rate out of 10   | Yes  | The platform provides CRUD functionality for restaurant reviews, enabling users to leave feedback and ratings with information such as restaurant name, location, feedback, and a rating out of 10. |
+| The platform provides a follow feature, enabling the network users to follow their favorite users. | Yes  | The platform includes a follow feature, allowing users to follow other users in the network and receive updates on their posts. |
+| The platform includes a feature that allows users to save lists of their favorite dishes.   | Yes  | The platform includes a "Save" feature that allows users to create and manage lists of their favorite dishes for future reference. |
+| The platform allows users to see their favorite users’ posts separated from everyone’s.  | Yes  | The platform includes a feature that separates the posts of followed users from those of all users, making it easy for users to view their favorite content. |
+
+The client expresses high satisfaction with the developed web application, expressing that it effectively addresses all the outlined success criteria (see Fig A. 4 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix). 
+
 # Criteria
 
 # Appendix
