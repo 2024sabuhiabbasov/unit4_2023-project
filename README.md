@@ -329,6 +329,27 @@ To display the author's name, I am using the `post[1]` value which I previously 
 ```
 So, I needed to display the list of ingredients associated with a recipe on the post page. To do this, I first added an HTML `<p>` tag with the text "Ingredients:". Next, I added an HTML `<ul>` tag to create an unordered list. Within this tag, I used a for loop in Jinja to iterate over each ingredient in the list of ingredients associated with the recipe (stored in `post[4]`). For each ingredient, I used an HTML `<li>` tag to display the ingredient text.
 
+<img src="https://user-images.githubusercontent.com/111758436/236991397-09d3a86f-fad0-4049-b6b4-a3ece3cd664b.png">
+<p align="center">
+  <i>Fig. 11</i>: Example ingredients list as shown in a post.
+</p>
+
+I needed to create text fields that are pre-filled with previously shared recipe information to allow for recipe editing. To achieve this, I used HTML `<textarea` tags with a `name` attribute that specifies the field's name, an `id` attribute for identification, and a `placeholder` attribute to display text that prompts users to enter information.
+```.html
+<label for="ingredients">Ingredients</label>
+<textarea name="ingredients" id="ingredients" placeholder="Ingredients">{{ post[2] }}</textarea>
+```
+For example, in the code snippet provided, the `<textarea>` element is created with the name "ingredients", the ID "ingredients", and a placeholder that says "Ingredients". The `{{ post[2] }}` expression is used to fill the text area with the previously saved recipe ingredients.
+
+Using the `label` element, I also provided a descriptive label for each text field. This is done by specifying the `for` attribute of the `label` tag to match the `id` attribute of the corresponding `<textarea>` element. 
+
+To update the data in the `recipes` table of `my social_net.db` database, I needed to create a query that would update the current values with new values. So, I used the SQL UPDATE statement:
+```.py
+query_update = f"UPDATE recipes SET title='{title}', content='{content}', ingredients='{ingredients}' where id={post_id}"
+```
+In my case, the UPDATE statement is combined with the SET keyword to specify which columns I wanted to update, and what their new values should be. In this code snippet, the columns I want to update are `title`, `content`, and `ingredients`.
+The WHERE clause is used to specify which row or rows to update. In my case, I used the `id` column to identify the row to update, using the `post_id` variable. 
+
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
 
