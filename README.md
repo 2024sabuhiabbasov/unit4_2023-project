@@ -287,7 +287,7 @@ The function then iterates over all HTML elements on the page with the class `in
 
 The function then checks whether `searchTerm` is a substring of `ingredientName`, using the `indexOf()` method. If `searchTerm` is found within `ingredientName`, the function sets the element's `display` property to `block` (i.e. the element is displayed). If `searchTerm` is not found within `ingredientName`, the function sets the element's `display` property to `none` (i.e. the element is hidden).
 
-`<script>` element in HTML is used to embed or reference client-side scripts, typically JavaScript, in an HTML document. These scripts can be used to add interactivity, functionality, and dynamic behavior to the web page, like I do for dynamic search in my ingredients input.
+`<script>` element in HTML is used to embed or reference client-side scripts, typically JavaScript, in an HTML document.[30] These scripts can be used to add interactivity, functionality, and dynamic behavior to the web page, like I do for dynamic search in my ingredients input.
 ```.py
 query = f"SELECT title, user_id, DATE(timestamp), content, ingredients, id, user_id from recipes where id={post_id}"
 ```
@@ -308,7 +308,7 @@ So, in this  code I first extracted the `user_id` from the post information usin
 
 Next, I executed the query using the `db.search()` method, which returned a list of tuples containing the username. Since I only needed the first item in the first tuple, I used `username[0][0]` to extract the actual username.
 
-Finally, I updated the `post` variable with the new username and the original user_id. I converted the post list to a tuple for consistency with the original query. 
+Finally, I updated the `post` variable with the new username and the original user_id. I converted the post list to a tuple for consistency with the original query. This is because tuples are immutable, meaning their values cannot be changed after they are created[31]. Since the original query returned a tuple, it made sense to keep the same format when updating the post variable.
 
 ```.html
 <p>User: <a href="{{ url_for('profile', user_id=post[6]) }}">{{ post[1] }}</a></p>
@@ -510,3 +510,7 @@ With these two queries, I was able to fetch the posts of the followed users and 
 [28]: “Dynamic Search.” CodePen, https://codepen.io/coltonf93/pen/DbagWg. Accessed 18 April 2023.
 
 [29]: “Place Autocomplete Address Form  |  Maps JavaScript API  |  Google Developers.” Google Developers, https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform. Accessed 20 April 2023.
+
+[30]: Scripts in HTML Documents. www.w3.org/TR/html401/interact/scripts.html. Accessed 18 April 2023.
+
+[31]: Python Tuples. www.w3schools.com/python/python_tuples.asp. Accessed 18 April 2023.
