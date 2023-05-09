@@ -285,7 +285,7 @@ def recipe_page(post_id):
             follow = True
         else:
             follow = False
-        query_saved = f"SELECT * from saves where user_id={user_id_title} and id={post_id}"
+        query_saved = f"SELECT * from saves where user_id={user_id_title} and post_id={post_id}"
         saved = db.search(query=query_saved)
         if saved:
             saved = True
