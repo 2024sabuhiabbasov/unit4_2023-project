@@ -420,6 +420,26 @@ query_unfollow = f"DELETE FROM follow WHERE follower={follower} and followed={us
 ```
 When the `query_unfollow` query is run it deletes the row in the `follow` table where the follower ID matches the current user and the followed ID matches the user being unfollowed. This removes the follow relationship between the two users.
 
+### Success criteria 6: The platform allows users to see their favorite users’ posts separated from everyone’s
+My success criteria required me to display followed users' posts seperated from everyone's posts in the network. When I first started working on this feature, I knew that I needed to fetch and display two different sets of posts: the posts of the users that the logged-in user is following, and the posts of all other users on the network. To fetch the posts of the followed users, I started by writing a query to fetch the user IDs of the users that the logged-in user is following:
+```.py
+followed = db.search(query=query_followed)
+followed = [i[0] for i in followed]
+```
+I then converted this list of user IDs to a tuple, which I could use in an SQL `IN` clause to filter posts by user ID:
+```.py
+followed = tuple(followed)
+```
+Finally, I wrote a query to fetch only the posts from the followed users:
+```.py
+query_posts_followed = f"SELECT title, user_id, DATE(timestamp), content, id, user_id from recipes where user_id IN {followed}"
+```
+And to fetch the posts of everyone on the network, I simply modified my query to include all posts:
+```.py
+"SELECT title, user_id, DATE(timestamp), content, id, user_id from recipes where user_id NOT IN {followed}"
+```
+With these two queries, I was able to fetch the posts of the followed users and everyone separately. 
+
 # Criteria D: Functionality
 ## A video demonstrating the proposed solution with narration
 
