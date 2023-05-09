@@ -543,10 +543,10 @@ With these two queries, I was able to fetch the posts of the followed users and 
 | The platform includes a feature that allows users to save lists of their favorite dishes.   | Yes  | The platform includes a "Save" feature that allows users to create and manage lists of their favorite dishes for future reference. |
 | The platform allows users to see their favorite users’ posts separated from everyone’s.  | Yes  | The platform includes a feature that separates the posts of followed users from those of all users, making it easy for users to view their favorite content. |
 
-The client expresses high satisfaction with the developed web application, expressing that it effectively addresses all the outlined success criteria (see Fig A. 4 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix). 
+The client expresses high satisfaction with the developed web application, expressing that it effectively addresses all the outlined success criteria (see Fig A. 4 in <a href="ttps://github.com/2024sabuhiabbasov/unit4_2023-project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix). 
 
 ## Evaluation by Peer
-I had the opportunity to receive feedback from a peer who evaluated my Foodie project, and I am pleased to say that it met all the success criteria that were set out at the beginning of the project. They mentioned that they especially liked the feature that suggests addresses when adding a restaurant review. As evidence of the consultation, I have included a screenshot of the email in the appendix section of my documentation (see Fig A. 5 in <a href="https://github.com/jonathanye29/unit4_project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix).
+I had the opportunity to receive feedback from a peer who evaluated my Foodie project, and I am pleased to say that it met all the success criteria that were set out at the beginning of the project. They mentioned that they especially liked the feature that suggests addresses when adding a restaurant review. As evidence of the consultation, I have included a screenshot of the email in the appendix section of my documentation (see Fig A. 5 in <a href="https://github.com/2024sabuhiabbasov/unit4_2023-project#evidence-of-consultation"> Evidence of Consultation</a> in Appendix).
 
 # Appendix
 
