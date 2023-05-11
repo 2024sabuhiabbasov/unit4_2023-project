@@ -1,4 +1,4 @@
-
+# Description: This file contains all the functions that are used in the main file
 import sqlite3
 
 

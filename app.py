@@ -8,14 +8,9 @@ from datetime import datetime, timedelta
 import dotenv
 import os
 
-app = Flask(__name__)
-print(app.__class__.__name__)
-app.secret_key = 'you-will-never-guess'
-app.config['UPLOAD_FOLDER'] = 'upload_folder'
-
-dotenv.load_dotenv()
-token_key = os.getenv('TOKEN_ENCRYPTION_KEY')
-
+app = Flask(__name__) # __name__ is the name of the current Python module
+print(app.__class__.__name__) # Flask
+app.secret_key = 'you-will-never-guess' # for encrypting the session
 
 def token_required(f):
     @wraps(f)
@@ -34,7 +29,6 @@ def token_required(f):
 
     return decorated
 
-
 def create_database():
     db = database_worker("social_net.db")
     query_user = """CREATE table if not exists users (
@@ -52,7 +46,7 @@ def create_database():
         post_id INTEGER,
         user_id INTEGER,
         FOREIGN KEY (user_id) REFERENCES users(id) on delete cascade,
-        FOREIGN KEY (post_id) REFERENCES posts(id) on delete cascade
+        FOREIGN KEY (post_id) REFERENCES recipes(id) on delete cascade
     )
     """
     query_comments = """CREATE table if not exists comments(
@@ -62,7 +56,7 @@ def create_database():
         post_id INTEGER,
         user_id INTEGER,
         FOREIGN KEY (user_id) REFERENCES users(id) on delete cascade,
-        FOREIGN KEY (post_id) REFERENCES posts(id) on delete cascade
+        FOREIGN KEY (post_id) REFERENCES recipes(id) on delete cascade
     )
     """
     query_follow = """CREATE table if not exists follow(
@@ -103,9 +97,9 @@ def create_database():
     db.close()
 
 
-@app.route('/')
+@app.route('/') # home page
 @app.route('/index')
-@token_required
+@token_required # requiring token to the homepage, otherwise everyone will be able to visit the page without token
 def index():
     global posts, reviews
     data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
@@ -146,11 +140,46 @@ def index():
                         reviews[i][j] = username[0][0]
             print(posts)
 
-        return render_template('index.html', title='Home', login=True, user_id=user_id_title, user=user, posts=posts, reviews=reviews)
+            return render_template('index.html', title='Home', login=True, user_id=user_id_title, user=user, posts=posts, reviews=reviews)
     return render_template('index.html', title='Home', login=True, user_id=user_id_title, user=user)
 
+@app.route('/login', methods=['GET', 'POST']) # login page
+def login(): # login function
+    print("It's trying to log in")
+    if request.method == 'POST': # if the method is POST, meaning that the user has
+        # submitted the form
+        email = request.form['email'] # get the email from the form
+        password = request.form['pswd'] # get the password from the form
+        if len(email) > 0 and len(password) > 0: # if the email and password are not empty
+            db = database_worker('social_net.db') # create a database worker, which will be used to get the user from the database
+            login_info = f"SELECT * from users where email='{email}'" # create a query to
+            # get the user with the given email
+            user = db.search(query=login_info) # get the user from the database
+            if user: # if the user exists
+                id, name, surname, country, username, email, hash = user[0] # get the user's data
+                if check_password(hashed_password=hash, user_password=password):
+                    # check if the password is correct using the check_password function
+                    print("password is correct") # if the password is correct, print it
+                    token = jwt.encode({'user_id': id, 'exp': datetime.utcnow() +
+                                       timedelta(minutes=60)}, token_key,
+                                       algorithm='HS256') # create a token to be used for authentication
+                    session['token'] = token # save the token in the session, so that it can be used later to check if the user is logged in or not
+                    print("Token created.") # print that the token has been created
+                    return redirect('/index') # redirect the user to the home page
+                else: # if the password is incorrect
+                    print("password is incorrect") # print that the password is incorrect
+                    flash('Wrong password', 'danger') # flash a message to the user
+            else: # if the user does not exist
+                print("User does not exist.") # print that the user does not exist
+                flash('User does not exist', 'danger') # flash a message to the user
+        else: # if the email or password are empty
+            print("Please fill in all fields.") # print that the user should fill in all fields
+            flash('Please fill in all fields', 'danger') # flash a message to the user
+    return render_template('login.html', title='Sign In',
+                           messages=get_flashed_messages()) # render the login page
 
-@app.route('/explore', methods=['GET', 'POST'])
+
+@app.route('/explore', methods=['GET', 'POST']) # explore page
 @token_required
 def explore():
     data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
@@ -188,7 +217,7 @@ def explore():
                            admin=user_id_title)
 
 
-@app.route('/delete_post/<int:post_id>')
+@app.route('/delete_post/<int:post_id>') # delete post
 @token_required
 def delete_post(post_id):
     data = jwt.decode(session['token'], token_key, algorithms=['HS256'])
@@ -199,8 +228,8 @@ def delete_post(post_id):
     if user:
         query_post = f"DELETE from recipes where id={post_id}"
         db.run_save(query=query_post)
-        return redirect(url_for('index'))
-    return redirect(url_for('index'))
+        return redirect(url_for('profile_user'))
+    return redirect(url_for('profile_user'))
 
 @app.route('/delete_review/<int:id>')
 @token_required
@@ -231,7 +260,7 @@ def edit_post(post_id):
             ingredients = request.form['ingredients']
             query_post = f"UPDATE recipes set title='{title}', content='{content}', ingredients='{ingredients}' where id={post_id}"
             db.run_save(query=query_post)
-            return redirect(url_for('index', user_id=user_id_title))
+            return redirect(url_for('explore'))
         query_post = f"SELECT title, content, ingredients, id from recipes where id={post_id}"
         post = db.search(query=query_post)
         return render_template('edit_post.html', title='Edit Post', user=user, post=post[0],
@@ -253,7 +282,7 @@ def edit_review(id):
             rating = request.form['rating']
             query_post = f"UPDATE reviews set name='{name}', content='{content}', location='{location}', stars='{rating}' where id={id}"
             db.run_save(query=query_post)
-            return redirect(url_for('profile_user', user_id=user_id_title))
+            return redirect(url_for('explore'))
         query_post = f"SELECT name, location, content, stars, id from reviews where id={id}"
         post = db.search(query=query_post)
         return render_template('edit_review.html', title='Edit Review', user=user, post=post[0],
@@ -294,6 +323,9 @@ def recipe_page(post_id):
         return render_template('recipe-page.html', title=f'{post[0]}', post=post, login=True, user_id=user_id_title,
                                follow=follow, save=saved)
     return render_template('recipe-page.html', title=f'{post[0]}', login=True, user_id=user_id_title, save=saved)
+
+dotenv.load_dotenv() # take environment variables from .env.
+token_key = os.getenv('TOKEN_ENCRYPTION_KEY') # get token encryption key from .env
 
 @app.route('/review/<int:id>')
 @token_required
@@ -461,36 +493,6 @@ def profile_user():
     return render_template('profile-user.html', title=f'{user[0]}', login=True, user=user, user_id=user_id)
 
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        email = request.form['email']
-        password = request.form['pswd']
-        if len(email) > 0 and len(password) > 0:
-            db = database_worker('social_net.db')
-            login = f"SELECT * from users where email='{email}'"
-            user = db.search(query=login)
-            if user:
-                id, name, surname, country, username, email, hash = user[0]
-                if check_password(hashed_password=hash, user_password=password):
-                    print("password is correct")
-                    token = jwt.encode({'user_id': id, 'exp': datetime.utcnow() + timedelta(minutes=60)}, token_key,
-                                       algorithm='HS256')
-                    session['token'] = token
-                    print("Token created.")
-                    return redirect('/')
-                else:
-                    print("password is incorrect")
-                    flash('Wrong password', 'danger')
-            else:
-                print("User does not exist.")
-                flash('User does not exist', 'danger')
-        else:
-            print("Please fill in all fields.")
-            flash('Please fill in all fields', 'danger')
-    return render_template('login.html', title='Sign In', messages=get_flashed_messages())
-
-
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     db = database_worker("social_net.db")
@@ -521,7 +523,7 @@ def signup():
                 flash('Registration completed. Please log in.', 'success')
                 print("Registration completed. Please log in.")
 
-                return render_template('login.html', title='Sign In', messages=get_flashed_messages())
+                return redirect(url_for('login'))
         else:
             flash('Please fill in all fields.', 'danger')
             print("Please fill in all fields.")
