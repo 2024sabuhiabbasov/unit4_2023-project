@@ -151,7 +151,7 @@ _Figure 1:_ The system diagram for the application is illustrated in Figure 1. D
 
 ## UML Diagram
 
-![unit4_UML (1)](https://github.com/2024sabuhiabbasov/unit4_2023-project/assets/111758436/ad0cb10b-ad17-4b77-869a-1bf821dbad02)
+![unit4_UML (1)](https://github.com/2024sabuhiabbasov/unit4_2023-project/assets/111758436/bb54da21-625d-4310-b8f0-5c472700426a)
 <p align="center">
   <i>Fig. 10</i>: The UML diagram in Figure 10 illustrates the class hierarchy used in the application.
 </p>
