@@ -599,12 +599,12 @@ I had the opportunity to receive feedback from a peer who evaluated my Foodie pr
   <i>Figure A. 1</i> I spoke with my friend, who is also a food enthusiast, about the challenges we face in connecting with others online and sharing our culinary creations. During our chat, we discussed the need for a dedicated social network for food lovers, and I captured this screenshot to illustrate our conversation.
 </p>
 
-![2nd](https://github.com/2024sabuhiabbasov/unit4_2023-project/assets/111758436/442b9d9b-75bc-453d-8c27-a5fc37570630)
+![Screenshot 2023-05-11 164430](https://github.com/2024sabuhiabbasov/unit4_2023-project/assets/111758436/24d88159-0a10-4e0f-a6eb-127a891bcfbc)
 <p align="center">
   <i>Figure A. 2</i> Client's approval of all success criteria and development plan after meeting.
 </p>
 
-![3rd](https://github.com/2024sabuhiabbasov/unit4_2023-project/assets/111758436/bbfee48c-cdcc-45ec-bb12-0383b1da055f)
+![Screenshot 2023-05-11 164048](https://github.com/2024sabuhiabbasov/unit4_2023-project/assets/111758436/c1306006-2446-4204-82b8-1ee1e90aa054)
 <p align="center">
 <i>Figure A. 3</i> Client's approval of all the current state of the web applications development after meeting.
 
