@@ -10,7 +10,7 @@
             <textarea id="recipe-instructions" name="recipe_instructions" rows="4" cols="50" required></textarea><br />
 
             <label for="recipe-ingredients">Ingredients:</label>
-            <input type="text" id="ingredient-search" name="ingredient_search" onkeyup="searchIngredients()" required><br>
+            <input type="text" id="ingredient-search" name="ingredient_search" onkeyup="searchIngredients()"><br>
 
             <div id="ingredient-list">
               {% for ingredient in ingredients_list %}
