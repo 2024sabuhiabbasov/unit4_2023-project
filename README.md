@@ -572,7 +572,6 @@ With these two queries, I was able to fetch the posts of the followed users and 
 # Criteria D: Functionality
 
 ## A video demonstrating the proposed solution with narration
-![Functionality Video](assets/Functionality.mp4)
 [Please click here to watch the video on YouTube](https://youtu.be/cIddi5ChwLs)
 
 # Criteria E: Evaluation
